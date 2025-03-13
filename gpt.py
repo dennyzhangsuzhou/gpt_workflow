@@ -85,26 +85,21 @@ prompt_all = '''你是自动驾驶行业软件开发专家，你主要负责车�
 '''
 
 sub_agent_prompt = '''你是自动驾驶行业软件开发专家，你主要负责车身和传感器信号的抽象，
-请根据我提供的原始信号和中间件信号的对应关系, 帮我设计3组测试值, 我提供的signal mapping中$0代表输出信号,$1-$x代表输入信号
-请将你的所有设计测试值以及预期输出结果值用json返回给我,JSON的key都是用我提供的映射关系表中的描述方式
+请根据我提供的原始信号(msf_input)和输出信号(msf_output)的对应关系(signal_mapping), 帮我设计3组测试值, 我提供的signal mapping中$0代表输出信号,$1-$x代表输入信号
+请将你的所有设计测试值以及预期输出结果值用json返回给我,多个信号值用","分隔,3组值之间用";"分隔
 返回值:合法的JSON字符串,可以用python json.loads() 校验
 示例:
 {
-    "msf_input": {
-        "xxxxx.dfdf.dfdf": [1,0,1],
-        "yyyyyyyyy.dsfsf.sdfdsf": [1,0,1]
-    },
-    "msf_output": {
-        "zzzzzzz.dfdf.dfdf.dfd": [1,0,1],
-        "dddfd.dfdfd.saada.dfsd": [2,1,2]
-    }
+    "msf_input": "1,0,1",
+    "msf_output": "1,2;0,1;1,2"
 }
 要求:
 1. 不要在结果中包含任何其他字符,比如markdown ```json ```
-2. 测试值只能是浮点数， 比如true用1,false用0, None用0
+2. 你的返回内容的格式必须和示例完全一致,包括JSON格式和key值
+2. 测试值只能是浮点数， 比如true用1,false用0
 3. 如果我给你msf_input是空字符串, 就只尝试构造输出信号的期望值
 4. 不能推导出每个输出信号的具体输出数值，就不要构造测试和输出
-5. 你给我的msf_input和msf_output中的所有信号描述,个数和顺序上都必须和我给你的完全对齐。
+5. 你返回的msf_input中信号值个数和顺序必须和我提供的msf_input中信号数目和顺序完全一致,msf_output同理
 '''
 def main():
     # 初始化BotForge，目前测试无需配置Token

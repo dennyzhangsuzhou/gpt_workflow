@@ -3,8 +3,6 @@ from typing import Any, Union, Dict, List
 
 
 def post_run(answer: str) -> Union[Dict[str, Any], List[Any], None]:
-    if not isinstance(answer, str):
-        return None
     if "```" in answer:
         start_pos = answer.find("```")
         first_newline = answer.find("\n", start_pos)

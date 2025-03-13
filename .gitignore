@@ -171,3 +171,4 @@ cython_debug/
 .pypirc
 
 .DS_Store
+data/mapping_with_cases.xlsx

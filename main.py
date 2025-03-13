@@ -11,7 +11,7 @@ if __name__ == "__main__":
     mapping_processor = MappingProcessor()
     total_time_costed = 0
     total_mapping_length = mapping_processor.get_mapping_length()
-    for index in range(9):
+    for index in range(total_mapping_length):
         time.sleep(5)
         mapping_str = mapping_processor.get_mapping_str(index)
         start_time = time.time()
