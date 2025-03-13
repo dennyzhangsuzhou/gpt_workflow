@@ -1,0 +1,745 @@
+VERSION "created by canmatrix"
+
+
+NS_ :
+
+BS_:
+
+BU_: ADCU IBC VCM EPS DA VDC RADAR None CDM 
+
+
+BO_ 2 LWSOUT_B5: 5 EPS
+ SG_ STRANGLE : 0|16@1- (0.1000000000000000055511151231257827021181583404541015625,0) [-780|780] "deg" ADCU
+ SG_ STRSPEED : 16|8@1+ (4,0) [0|1016] "deg_s" ADCU
+ SG_ LWSTRIM : 29|1@1+ (1,0) [0|1] "" ADCU
+ SG_ LWSCAL : 30|1@1+ (1,0) [0|1] "" ADCU
+ SG_ LWSOK : 31|1@1+ (1,0) [0|1] "" ADCU
+ SG_ CHCKSUM : 32|4@1+ (1,0) [0|15] "" ADCU
+ SG_ MSGCOUNT : 36|4@1+ (1,0) [0|15] "" ADCU
+
+BO_ 390 AutoSteer_Status: 8 EPS
+ SG_ EPS_DrvAngCmdAbortFeedback : 7|8@0+ (1,0) [0|128] "" ADCU
+ SG_ EPS_DrvStrgWhlVbnLvlResp : 15|3@0+ (1,0) [0|7] "" ADCU
+ SG_ EPS_AD_status : 12|2@0+ (1,0) [0|3] "" ADCU
+ SG_ EPS_AngOverR : 10|1@0+ (1,0) [0|1] "" ADCU
+ SG_ EPS_AngSpdOverR : 8|1@0+ (1,0) [0|1] "" ADCU
+ SG_ EPS_LKA_TRQ : 23|10@0- (0.01000000000000000020816681711721685132943093776702880859375,0) [-5|5] "Nm" ADCU
+ SG_ EPS_LKA_TRQQF : 29|1@0+ (1,0) [0|1] "" ADCU
+ SG_ EPS_FAIL : 27|2@0+ (1,0) [0|3] "" ADCU
+ SG_ FAIL_IN_STS : 25|1@0+ (1,0) [0|1] "" ADCU
+ SG_ EPS_SWTRQ_QF : 24|1@0+ (1,0) [0|1] "" ADCU
+ SG_ EPS_SWTRQ : 39|12@0- (0.01000000000000000020816681711721685132943093776702880859375,0) [-12|12] "Nm" ADCU
+ SG_ EPS_CNT : 51|4@0+ (1,0) [0|15] "" ADCU
+ SG_ EPS_SUM : 63|8@0+ (1,0) [0|255] "" ADCU
+
+BO_ 403 EPS_Control_status2: 8 EPS
+ SG_ EPS_CONA : 7|18@0- (0.01,0) [-780|780] "deg" ADCU
+ SG_ EPS_CONAV : 31|16@0+ (0.1000000000000000055511151231257827021181583404541015625,-1000) [-1000|1000] "deg_s" ADCU
+ SG_ EPS_CONA_QF : 47|1@0+ (1,0) [0|1] "" ADCU
+ SG_ DriveModeStatus : 46|2@0+ (1,0) [0|3] "" ADCU
+ SG_ EPS_CNT : 55|4@0+ (1,0) [0|15] "" ADCU
+ SG_ EPS_SUM : 63|8@0+ (1,0) [0|255] "" ADCU
+
+BO_ 682 BrakeSystemtoADAS_MSG1: 8 IBC
+ SG_ ADAS_PTC_STATUS : 11|2@0+ (1,0) [0|3] "" ADCU
+ SG_ SIGNAL_SOURCING : 9|2@0+ (1,0) [0|3] "" ADCU
+ SG_ AEB_ENBL : 23|1@0+ (1,0) [0|1] "" ADCU
+ SG_ AEB_STATUS : 22|1@0+ (1,0) [0|1] "" ADCU
+ SG_ AEB_ALIVE : 21|1@0+ (1,0) [0|1] "" ADCU
+ SG_ PREFILL_ENBL : 20|1@0+ (1,0) [0|1] "" ADCU
+ SG_ PREFILL_STATUS : 19|1@0+ (1,0) [0|1] "" ADCU
+ SG_ PREFILL_ALIVE : 18|1@0+ (1,0) [0|1] "" ADCU
+ SG_ ABA_ENBL : 17|1@0+ (1,0) [0|1] "" ADCU
+ SG_ ABA_STATUS : 16|1@0+ (1,0) [0|1] "" ADCU
+ SG_ ABA_ALIVE : 31|1@0+ (1,0) [0|1] "" ADCU
+ SG_ AWB_ENBL : 30|1@0+ (1,0) [0|1] "" ADCU
+ SG_ AWB_STATUS : 29|1@0+ (1,0) [0|1] "" ADCU
+ SG_ AWB_ALIVE : 28|1@0+ (1,0) [0|1] "" ADCU
+ SG_ ACC_CDD_ENBL : 27|1@0+ (1,0) [0|1] "" ADCU
+ SG_ ACC_CDD_STATUS : 26|1@0+ (1,0) [0|1] "" ADCU
+ SG_ ACC_CDD_ALIVE : 25|1@0+ (1,0) [0|1] "" ADCU
+ SG_ ACC_CDD_TEMP : 36|1@0+ (1,0) [0|1] "" ADCU
+ SG_ EAPM_ENBL : 35|1@0+ (1,0) [0|1] "" ADCU
+ SG_ EAPM_Status : 34|1@0+ (1,0) [0|1] "" ADCU
+ SG_ EAPM_Alive : 33|1@0+ (1,0) [0|1] "" ADCU
+ SG_ WCBF_EXIST : 54|1@0+ (1,0) [0|1] "" ADCU
+ SG_ VEH_STD_STILL : 53|2@0+ (1,0) [0|3] "" ADCU
+ SG_ MSG_CNT : 51|4@0+ (1,0) [0|15] "" ADCU
+ SG_ CHKSUM : 63|8@0+ (1,0) [0|255] "" ADCU
+
+BO_ 459 IBC_BrakeData: 8 IBC
+ SG_ MbRgnTrgtWhl : 7|16@0+ (1,0) [0|32768] "Nm" ADCU
+ SG_ MbRgnTrgtWhlQu : 23|2@0+ (1,0) [0|2] "" ADCU
+ SG_ BSTERPRE : 21|12@0+ (0.1000000000000000055511151231257827021181583404541015625,-5) [-5|302.1] "bar" ADCU
+ SG_ RBSACT : 42|1@0+ (1,0) [0|1] "" ADCU
+ SG_ RBSFAIL : 41|1@0+ (1,0) [0|1] "" ADCU
+ SG_ MSGCNTR : 51|4@0+ (1,0) [0|15] "" ADCU
+ SG_ CHKSUM : 63|8@0+ (1,0) [0|255] "" ADCU
+
+BO_ 581 Brake_StabilityControl_RN1: 8 IBC
+ SG_ VDCFAIL : 25|1@0+ (1,0) [0|1] "" ADCU
+ SG_ OFF_SW : 24|1@0+ (1,0) [0|1] "" ADCU
+ SG_ TCSACT : 47|1@0+ (1,0) [0|1] "" ADCU
+ SG_ VDCACT : 46|1@0+ (1,0) [0|1] "" ADCU
+ SG_ MSRACT : 45|1@0+ (1,0) [0|1] "" ADCU
+ SG_ TCSFAIL : 43|1@0+ (1,0) [0|1] "" ADCU
+ SG_ MSGCNTRR1 : 57|2@0+ (1,0) [0|3] "" ADCU
+
+BO_ 644 Front_Wheel_Speed_Frame: 8 IBC
+ SG_ WRFR : 7|16@0+ (0.041666666666666664,0) [0|2730.58333333333] "rpm" ADCU
+ SG_ WRFL : 23|16@0+ (0.041666666666666664,0) [0|2730.58333333333] "rpm" ADCU
+ SG_ VSO : 39|16@0+ (0.01000000000000000020816681711721685132943093776702880859375,0) [0|655.34] "km_h" ADCU
+ SG_ MSGCOUNT : 55|8@0+ (1,0) [0|255] "" ADCU
+ SG_ CHKSUMFR : 63|8@0+ (1,0) [0|255] "" ADCU
+
+BO_ 645 Rear_Wheel_Speed_Frame: 8 IBC
+ SG_ WRRR : 7|16@0+ (0.041666666666666664,0) [0|2730.58333333333] "rpm" ADCU
+ SG_ WRRL : 23|16@0+ (0.041666666666666664,0) [0|2730.58333333333] "rpm" ADCU
+ SG_ VCVT : 39|8@0+ (1,0) [0|255] "km_h" ADCU
+ SG_ WDFL : 47|2@0+ (1,0) [0|3] "" ADCU
+ SG_ WDFR : 45|2@0+ (1,0) [0|3] "" ADCU
+ SG_ WDRL : 43|2@0+ (1,0) [0|3] "" ADCU
+ SG_ WDRR : 41|2@0+ (1,0) [0|3] "" ADCU
+ SG_ MSGCOUNT : 55|8@0+ (1,0) [0|255] "" ADCU
+ SG_ CHKSUMFR : 63|8@0+ (1,0) [0|255] "" ADCU
+
+BO_ 646 Wheel_Speed_Pulse_5A: 5 IBC
+ SG_ WTFL : 13|7@0+ (1,0) [0|96] "top" ADCU
+ SG_ WTFR : 22|7@0+ (1,0) [0|96] "top" ADCU
+ SG_ WTRL : 31|7@0+ (1,0) [0|96] "top" ADCU
+ SG_ WTRR : 24|7@0+ (1,0) [0|96] "top" ADCU
+
+BO_ 658 VehicleDynamic02: 8 IBC
+ SG_ BSTERIRStro : 39|10@0+ (0.05000000000000000277555756156289135105907917022705078125,-5) [-5|46.1] "mm" ADCU
+ SG_ PSS_02 : 55|8@0+ (1,0) [0|254] "bar" ADCU
+ SG_ CHCKSUM : 63|4@0+ (1,0) [0|15] "" ADCU
+ SG_ MVP_COUNT : 57|2@0+ (1,0) [0|3] "" ADCU
+
+BO_ 852 Brake_GeneralData: 8 IBC
+ SG_ VSO : 7|16@0+ (0.01000000000000000020816681711721685132943093776702880859375,0) [0|655.34] "km_h" ADCU
+ SG_ WBF_TORQUE : 23|14@0+ (2,0) [0|32764] "Nm" ADCU
+ SG_ EBDACT : 47|1@0+ (1,0) [0|1] "" ADCU
+ SG_ MSGCNTR : 44|2@0+ (1,0) [0|3] "" ADCU
+ SG_ ABSFAIL : 55|1@0+ (1,0) [0|1] "" ADCU
+ SG_ ABSACT : 54|1@0+ (1,0) [0|1] "" ADCU
+ SG_ STPLMSW : 53|2@0+ (1,0) [0|3] "" ADCU
+ SG_ BLR : 51|1@0+ (1,0) [0|1] "" ADCU
+
+BO_ 576 EPB_SystemControl: 8 IBC
+ SG_ EPB_STAT : 3|3@0+ (1,0) [0|7] "" ADCU
+ SG_ EPB_FAIL : 0|1@0+ (1,0) [0|1] "" ADCU
+ SG_ DPB_STAT : 10|2@0+ (1,0) [0|3] "" ADCU
+ SG_ EPB_SW_STAT : 39|2@0+ (1,0) [0|3] "" ADCU
+ SG_ EPB_ENBL : 35|1@0+ (1,0) [0|1] "" ADCU
+ SG_ ALIVECOUNTER : 51|4@0+ (1,0) [0|15] "" ADCU
+ SG_ CHKSUM : 63|8@0+ (1,0) [0|255] "" ADCU
+
+BO_ 1388 DrivingControl_to_Meter: 6 IBC
+ SG_ IDM_ST_LAMP_RQ : 45|1@0+ (1,0) [0|1] "" ADCU
+
+BO_ 1418 IBC_SystemControl: 4 IBC
+ SG_ AVH_OFFSW : 8|1@0+ (1,0) [0|1] "" ADCU
+ SG_ AVH_ACT : 23|1@0+ (1,0) [0|1] "" ADCU
+ SG_ AVH_FAIL : 22|1@0+ (1,0) [0|1] "" ADCU
+ SG_ CHKSUM : 31|8@0+ (1,0) [0|255] "" ADCU
+
+BO_ 456 DrivingtoBrakeSystem: 8 ADCU
+ SG_ AEB_AXTAR : 7|16@0+ (0.0004881999999999999946369289016701031869160942733287811279296875,-16) [-16|-0.0031506] "m_s2" IBC
+ SG_ AEB_DecREQ : 23|1@0+ (1,0) [0|1] "" IBC
+ SG_ ABA_Level : 22|2@0+ (1,0) [0|3] "" IBC
+ SG_ ABA_REQ : 20|1@0+ (1,0) [0|1] "" IBC
+ SG_ AWB_Level : 19|3@0+ (1,0) [0|7] "" IBC
+ SG_ AWB_REQ : 16|1@0+ (1,0) [0|1] "" IBC
+ SG_ PREFILL_REQ : 31|1@0+ (1,0) [0|1] "" IBC
+ SG_ CPFunctionAlive : 30|1@0+ (1,0) [0|1] "" IBC
+ SG_ CPFunctionAct : 29|1@0+ (1,0) [0|1] "" IBC
+ SG_ CP_CDDReqVal : 39|12@0+ (5,0) [0|20470] "Nm" IBC
+ SG_ CP_CDDReq : 28|1@0+ (1,0) [0|1] "" IBC
+ SG_ CP_DriveOff : 55|1@0+ (1,0) [0|1] "" IBC
+ SG_ CP_StandstillReq : 43|1@0+ (1,0) [0|1] "" IBC
+ SG_ EmFunctionActFlag : 42|3@0+ (1,0) [0|7] "" IBC
+ SG_ ALIVE_CNT : 27|4@0+ (1,0) [0|15] "" IBC
+ SG_ CHKSUM : 63|8@0+ (1,0) [0|255] "" IBC
+
+BO_ 455 EAPMtoBrakeSystem: 6 ADCU
+ SG_ EAP_AXTAR : 7|16@0+ (0.0004882,-16) [-16|-0.0031506] "m_s2" IBC
+ SG_ EAP_DecREQ : 23|1@0+ (1,0) [0|1] "" IBC
+ SG_ MSG_CNT : 19|4@0+ (1,0) [0|15] "" IBC,VCM
+ SG_ CHKSUM : 47|8@0+ (1,0) [0|255] "" IBC,VCM
+
+BO_ 457 APAtoBrakeSystem: 8 ADCU
+ SG_ EPB_StasticReq : 7|2@0+ (1,0) [0|3] "" IBC
+ SG_ EPB_DynBrakAppReq : 5|1@0+ (1,0) [0|1] "" IBC
+ SG_ EPB_DynDecReqVal : 15|12@0+ (5,0) [0|20470] "Nm" IBC
+ SG_ APFunctionAlive : 39|1@0+ (1,0) [0|1] "" IBC
+ SG_ APFunctionAct : 38|1@0+ (1,0) [0|1] "" IBC
+ SG_ AP_CDDReqVal : 47|12@0+ (5,0) [0|20470] "Nm" IBC
+ SG_ AP_CDDReq : 37|1@0+ (1,0) [0|1] "" IBC
+ SG_ AP_DriveOff : 36|1@0+ (1,0) [0|1] "" IBC
+ SG_ AP_StandstillReq : 35|1@0+ (1,0) [0|1] "" IBC
+ SG_ AP_BrakeMode : 34|2@0+ (1,0) [0|3] "" IBC
+ SG_ MSG_CNT : 51|4@0+ (1,0) [0|15] "" IBC
+ SG_ CHKSUM : 63|8@0+ (1,0) [0|255] "" IBC
+
+BO_ 691 ADCUtoEPS: 8 ADCU
+ SG_ ADCU_DriAngleRequestCtrl : 7|1@0+ (1,0) [0|1] "" EPS
+ SG_ ADCU_DriAngleRequest : 15|16@0- (0.1000000000000000055511151231257827021181583404541015625,0) [-780|780] "degree" EPS
+ SG_ ADCU_DriAngleRequest_Vld : 6|1@0+ (1,0) [0|1] "" EPS
+ SG_ ADCU_ControlMode : 5|2@0+ (1,0) [0|3] "" EPS
+ SG_ STIFFNESS_Req : 47|8@0+ (1,0) [0|100] "pct" EPS
+ SG_ ADCU_DeratingLevelRequest : 55|8@0+ (1,0) [0|100] "pct" EPS
+ SG_ ADCU_HapcWarnReq : 3|2@0+ (1,0) [0|3] "" EPS
+ SG_ ADCU_ESS_Mode : 1|2@0+ (1,0) [0|3] "" EPS
+ SG_ ADCU_MsgRC : 39|4@0+ (1,0) [0|15] "" EPS
+ SG_ ADCU_MsgChecksum : 63|8@0+ (1,0) [0|255] "" EPS
+
+BO_ 387 VCM_TorqueControl_TM1: 8 VCM
+ SG_ V_APO : 31|8@0+ (0.40000000000000002220446049250313080847263336181640625,0) [0|100] "pct" DA,VDC,RADAR,ADCU
+
+BO_ 384 VCM_TorqueControl_RN1: 8 VCM
+ SG_ ETCFAIL : 63|3@0+ (1,0) [0|7] "" None
+ SG_ P_RUN : 51|4@0+ (1,0) [0|15] "" ADCU
+
+BO_ 1361 ECM_GeneralStatus: 8 VCM
+ SG_ ENG_STA : 41|2@0+ (1,0) [0|3] "" ADCU
+
+BO_ 458 ADCU_VCM_01: 8 ADCU
+ SG_ ADCU_ShifterReq : 23|1@0+ (1,0) [0|1] "" IBC,VCM
+ SG_ ADCU_ShifterPosReq : 19|4@0+ (1,0) [0|15] "" IBC,VCM
+ SG_ MessageCounter : 51|4@0+ (1,0) [0|15] "" IBC,VCM
+ SG_ Checksum : 63|8@0+ (1,0) [0|255] "" IBC,VCM
+
+BO_ 1255 ADCU_MagicCarpet_L: 8 ADCU
+ SG_ MCO_TYPE_L1 : 7|3@0+ (1,0) [0|7] "" CDM
+ SG_ MCO_DISTANCE_L1 : 4|11@0+ (1,0) [0|1500] "cm" CDM
+ SG_ MCO_LEVEL_L1 : 9|4@0+ (1,0) [0|15] "" CDM
+ SG_ MCO_TYPE_L2 : 21|3@0+ (1,0) [0|7] "" CDM
+ SG_ MCO_DISTANCE_L2 : 18|11@0+ (1,0) [0|1500] "cm" CDM
+ SG_ MCO_LEVEL_L2 : 39|4@0+ (1,0) [0|15] "" CDM
+ SG_ MCO_TYPE_L3 : 35|3@0+ (1,0) [0|7] "" CDM
+ SG_ MCO_DISTANCE_L3 : 47|11@0+ (1,0) [0|1500] "cm" CDM
+ SG_ MCO_LEVEL_L3 : 52|4@0+ (1,0) [0|15] "" CDM
+
+BO_ 1256 ADCU_MagicCarpet_R: 8 ADCU
+ SG_ MCO_TYPE_R1 : 7|3@0+ (1,0) [0|7] "" CDM
+ SG_ MCO_DISTANCE_R1 : 4|11@0+ (1,0) [0|1500] "cm" CDM
+ SG_ MCO_LEVEL_R1 : 9|4@0+ (1,0) [0|15] "" CDM
+ SG_ MCO_TYPE_R2 : 21|3@0+ (1,0) [0|7] "" CDM
+ SG_ MCO_DISTANCE_R2 : 18|11@0+ (1,0) [0|1500] "cm" CDM
+ SG_ MCO_LEVEL_R2 : 39|4@0+ (1,0) [0|15] "" CDM
+ SG_ MCO_TYPE_R3 : 35|3@0+ (1,0) [0|7] "" CDM
+ SG_ MCO_DISTANCE_R3 : 47|11@0+ (1,0) [0|1500] "cm" CDM
+ SG_ MCO_LEVEL_R3 : 52|4@0+ (1,0) [0|15] "" CDM
+ SG_ MC_FAULT_STS : 48|1@0+ (1,0) [0|1] "" CDM
+ SG_ MC_WORK_STS : 63|2@0+ (1,0) [0|3] "" CDM
+
+
+
+CM_ SG_ 2 STRANGLE "Intel格式，整车其他ECU用到的方向盘转角信号，TAS传感器得到，MMT对此条报文无需求但EPS发出供参考";
+CM_ SG_ 2 STRSPEED "TAS传感器得到的方向盘转角速度信号";
+CM_ SG_ 2 LWSTRIM "002信号初始化标志位";
+CM_ SG_ 2 LWSCAL "002信号标定标志位";
+CM_ SG_ 2 LWSOK "002方向盘转角信号fail信号";
+CM_ SG_ 2 CHCKSUM "None";
+CM_ SG_ 2 MSGCOUNT "None";
+CM_ SG_ 390 EPS_DrvAngCmdAbortFeedback "表示横向控制器当前状态跳出 Active的原因
+0x0:No error(正常工作)
+0x1:Vehicle speed Invalid(行车：车速超
+限大于 155kph；泊车：车速超限大于25kph)
+0x2:Driver Interference（驾驶员干预触发）
+0x3:ADCU Ctrl Request Invalid（包含checksum RC timeout等通信异常）
+0x6:Request Angle Slope over range
+0x7:Request Angle Value over range
+0x8:Steering permanently error
+Other:Reserved";
+CM_ SG_ 390 EPS_DrvStrgWhlVbnLvlResp "预留，EPS 响应方向盘振动的反馈状态信号";
+CM_ SG_ 390 EPS_AD_status "EPS发送与AD哪类功能握手的信号";
+CM_ SG_ 390 EPS_AngOverR "EPS反馈请求的目标角度超限标志";
+CM_ SG_ 390 EPS_AngSpdOverR "EPS反馈请求的目标角度梯度超限标志";
+CM_ SG_ 390 EPS_LKA_TRQ "-";
+CM_ SG_ 390 EPS_LKA_TRQQF "-";
+CM_ SG_ 390 EPS_FAIL "当前转向系统控制器角度控制功能的状态
+0x0:Temporary inhibit
+(转向系统转向控制功能处于临时抑
+制状态，当前点火周期临时抑制条
+件解除后，转向控制功能可激活);
+0x1:Available for control
+(转向系统转向控制功能可用但未激
+活);
+0x2:Active
+(转向系统转向控制功能激活);
+0x3:Permanently failed
+(转向系统检测到相关严重故障角度
+控制功能被禁止使用，且在当前点
+火循环不可恢复使用)";
+CM_ SG_ 390 FAIL_IN_STS "EPS反馈的故障状态";
+CM_ SG_ 390 EPS_SWTRQ_QF "EPS 反馈的驾驶员手力矩是否有效";
+CM_ SG_ 390 EPS_SWTRQ "左正右负，EPS 反馈的驾驶员手力矩";
+CM_ SG_ 390 EPS_CNT "-";
+CM_ SG_ 390 EPS_SUM "算法：
+参考25953 NDS42中规定";
+CM_ SG_ 403 EPS_CONA "左负右正，方向盘实际转角大小，电机位置传感器计算得到";
+CM_ SG_ 403 EPS_CONAV "左负右正，方向盘实际转角速度";
+CM_ SG_ 403 EPS_CONA_QF "方向盘实际转角大小有效位";
+CM_ SG_ 403 DriveModeStatus "预留";
+CM_ SG_ 403 EPS_CNT "-";
+CM_ SG_ 403 EPS_SUM "算法：
+参考25953 NDS42中规定";
+CM_ SG_ 682 ADAS_PTC_STATUS "参与握手";
+CM_ SG_ 682 SIGNAL_SOURCING "FO需求，新增，不参与握手";
+CM_ SG_ 682 AEB_ENBL "-";
+CM_ SG_ 682 AEB_STATUS "-";
+CM_ SG_ 682 AEB_ALIVE "-";
+CM_ SG_ 682 PREFILL_ENBL "-";
+CM_ SG_ 682 PREFILL_STATUS "-";
+CM_ SG_ 682 PREFILL_ALIVE "-";
+CM_ SG_ 682 ABA_ENBL "-";
+CM_ SG_ 682 ABA_STATUS "-";
+CM_ SG_ 682 ABA_ALIVE "-";
+CM_ SG_ 682 AWB_ENBL "-";
+CM_ SG_ 682 AWB_STATUS "-";
+CM_ SG_ 682 AWB_ALIVE "-";
+CM_ SG_ 682 ACC_CDD_ENBL "-";
+CM_ SG_ 682 ACC_CDD_STATUS "-";
+CM_ SG_ 682 ACC_CDD_ALIVE "-";
+CM_ SG_ 682 ACC_CDD_TEMP "-";
+CM_ SG_ 682 EAPM_ENBL "-";
+CM_ SG_ 682 EAPM_Status "-";
+CM_ SG_ 682 EAPM_Alive "-";
+CM_ SG_ 682 WCBF_EXIST "-";
+CM_ SG_ 682 VEH_STD_STILL "-";
+CM_ SG_ 682 MSG_CNT "-";
+CM_ SG_ 682 CHKSUM "-";
+CM_ SG_ 459 MbRgnTrgtWhl "CRBS请求电机回收扭矩（轮端）";
+CM_ SG_ 459 MbRgnTrgtWhlQu "CRBS请求电机回收扭矩有效标志位";
+CM_ SG_ 459 BSTERPRE "轮端制动压力";
+CM_ SG_ 459 RBSACT "CRBS功能作动标志位";
+CM_ SG_ 459 RBSFAIL "CRBS功能故障标志位";
+CM_ SG_ 459 MSGCNTR "-";
+CM_ SG_ 459 CHKSUM "-";
+CM_ SG_ 581 VDCFAIL "ESP功能故障标志位";
+CM_ SG_ 581 OFF_SW "ESP功能关闭标志位";
+CM_ SG_ 581 TCSACT "TCS降扭作动标志位";
+CM_ SG_ 581 VDCACT "ESP功能作动标志位";
+CM_ SG_ 581 MSRACT "TCS升扭作动标志位";
+CM_ SG_ 581 TCSFAIL "TCS功能故障标志位";
+CM_ SG_ 581 MSGCNTRR1 "-";
+CM_ SG_ 644 WRFR "右前轮轮速信号";
+CM_ SG_ 644 WRFL "左前轮轮速信号";
+CM_ SG_ 644 VSO "车速信号";
+CM_ SG_ 644 MSGCOUNT "-";
+CM_ SG_ 644 CHKSUMFR "-";
+CM_ SG_ 645 WRRR "右后轮轮速信号";
+CM_ SG_ 645 WRRL "左后轮轮速信号";
+CM_ SG_ 645 VCVT "滑移时估计的车辆速度
+FO需求新增，预留";
+CM_ SG_ 645 WDFL "左前轮方向信号";
+CM_ SG_ 645 WDFR "右前轮方向信号";
+CM_ SG_ 645 WDRL "左后轮方向信号";
+CM_ SG_ 645 WDRR "右后轮方向信号";
+CM_ SG_ 645 MSGCOUNT "-";
+CM_ SG_ 645 CHKSUMFR "-";
+CM_ SG_ 646 WTFL "左前轮脉冲信号";
+CM_ SG_ 646 WTFR "右前轮脉冲信号";
+CM_ SG_ 646 WTRL "左后轮脉冲信号";
+CM_ SG_ 646 WTRR "右后轮脉冲信号";
+CM_ SG_ 658 BSTERIRStro "制动踏板行程信号";
+CM_ SG_ 658 PSS_02 "IBC机械主缸制动压力信号";
+CM_ SG_ 658 CHCKSUM "-";
+CM_ SG_ 658 MVP_COUNT "-";
+CM_ SG_ 852 VSO "车速信号（同284，仅周期不同）";
+CM_ SG_ 852 WBF_TORQUE "轮边液压制动力矩（不包含CRBS的回收负扭）";
+CM_ SG_ 852 EBDACT "EBD功能作动标志位";
+CM_ SG_ 852 MSGCNTR "-";
+CM_ SG_ 852 ABSFAIL "ABS功能故障标志位";
+CM_ SG_ 852 ABSACT "ABS功能作动标志位";
+CM_ SG_ 852 STPLMSW "制动踏板是否踩下标志位";
+CM_ SG_ 852 BLR "制动尾灯请求";
+CM_ SG_ 576 EPB_STAT "EPKB当前状态";
+CM_ SG_ 576 EPB_FAIL "EPKB是否故障标志位";
+CM_ SG_ 576 DPB_STAT "DPB功能作动标志位";
+CM_ SG_ 576 EPB_SW_STAT "EPKB开关状态（P档开关联动，无释放状态）";
+CM_ SG_ 576 EPB_ENBL "EPKB当前是否可响应外部请求标志位";
+CM_ SG_ 576 ALIVECOUNTER "-";
+CM_ SG_ 576 CHKSUM "-";
+CM_ SG_ 1388 IDM_ST_LAMP_RQ "SRRL,SRRR需求，紧急制动双闪灯";
+CM_ SG_ 1418 AVH_OFFSW "AVH开关是否开启";
+CM_ SG_ 1418 AVH_ACT "AVH功能作动标志位";
+CM_ SG_ 1418 AVH_FAIL "AVH功能故障标志位";
+CM_ SG_ 1418 CHKSUM "-";
+CM_ SG_ 456 AEB_AXTAR "FEB减速度接口";
+CM_ SG_ 456 AEB_DecREQ "FEB减速度请求标志位";
+CM_ SG_ 456 ABA_Level "ABA功能Level 请求";
+CM_ SG_ 456 ABA_REQ "ABA功能请求标志位";
+CM_ SG_ 456 AWB_Level "AWB功能Level 请求";
+CM_ SG_ 456 AWB_REQ "AWB功能请求标志位";
+CM_ SG_ 456 PREFILL_REQ "预填充请求";
+CM_ SG_ 456 CPFunctionAlive "ICC(ACC/NOA)功能故障标志位";
+CM_ SG_ 456 CPFunctionAct "ICC(ACC/NOA)功能作动标志位";
+CM_ SG_ 456 CP_CDDReqVal "ACC/NOA减速扭矩请求值";
+CM_ SG_ 456 CP_CDDReq "ACC/NOA减速扭矩请求标志位";
+CM_ SG_ 456 CP_DriveOff "ACC/NOA起步请求标志位";
+CM_ SG_ 456 CP_StandstillReq "ACC/NOA停车请求标志位";
+CM_ SG_ 456 EmFunctionActFlag "ADCU Ax控制口功能激活情况";
+CM_ SG_ 456 ALIVE_CNT "-";
+CM_ SG_ 456 CHKSUM "-";
+CM_ SG_ 455 EAP_AXTAR "EAPM 减速度接口";
+CM_ SG_ 455 EAP_DecREQ "EAPM减速度请求标志位";
+CM_ SG_ 455 MSG_CNT "-";
+CM_ SG_ 455 CHKSUM "-";
+CM_ SG_ 457 EPB_StasticReq "EPKB控制请求";
+CM_ SG_ 457 EPB_DynBrakAppReq "EPKB(RBU)动态制动标志位";
+CM_ SG_ 457 EPB_DynDecReqVal "EPKB(RBU)动态制动请求力矩值";
+CM_ SG_ 457 APFunctionAlive "APA（包含HPA)功能故障标志位";
+CM_ SG_ 457 APFunctionAct "APA(包含HPA)功能作动标志位";
+CM_ SG_ 457 AP_CDDReqVal "APA(包含HPA) 减速度接口";
+CM_ SG_ 457 AP_CDDReq "APA(包含HPA)减速度请求标志位";
+CM_ SG_ 457 AP_DriveOff "APA(包含HPA)起步请求标志位";
+CM_ SG_ 457 AP_StandstillReq "APA(包含HPA)停车请求标志位";
+CM_ SG_ 457 AP_BrakeMode "刹车模式请求（主要用于泊车功能）";
+CM_ SG_ 457 MSG_CNT "-";
+CM_ SG_ 457 CHKSUM "-";
+CM_ SG_ 691 ADCU_DriAngleRequestCtrl "ADCU 是否请求转角控制";
+CM_ SG_ 691 ADCU_DriAngleRequest "ADCU 转角请求值，表示请求转向系统执行目标转向角度控制的值，其代表直接方向盘转角目标值（非单独叠加角度值）,左负右正";
+CM_ SG_ 691 ADCU_DriAngleRequest_Vld "ADCU 转角请求值有效位";
+CM_ SG_ 691 ADCU_ControlMode "新增，ADCU请求所属功能激活标志位";
+CM_ SG_ 691 STIFFNESS_Req "预留，参考base版人机共驾，单位百分比";
+CM_ SG_ 691 ADCU_DeratingLevelRequest "预留，人机共驾驾驶员小角度未超过驾驶员干预的阈值下，ADCU发送该百分比信号给EPS，EPS调整电机力矩，单位百分比";
+CM_ SG_ 691 ADCU_HapcWarnReq "预留，震动提醒";
+CM_ SG_ 691 ADCU_ESS_Mode "ESA紧急转向功能设立单独信号(满足博世华域提出的安全需要)";
+CM_ SG_ 691 ADCU_MsgRC "循环冗余计数连续性信号";
+CM_ SG_ 691 ADCU_MsgChecksum "校验信号，算法：
+参考25953 NDS42中规定";
+CM_ SG_ 387 V_APO "单位百分比";
+CM_ SG_ 384 ETCFAIL "行车FO需求";
+CM_ SG_ 384 P_RUN "USS需求";
+CM_ SG_ 1361 ENG_STA "EAPM功能使用";
+CM_ SG_ 458 ADCU_ShifterReq "IBC仅监控此信号用于泊车功能有故障时相关保压动作的执行";
+CM_ SG_ 458 ADCU_ShifterPosReq "IBC仅监控此信号用于泊车功能有故障时相关保压动作的执行";
+CM_ SG_ 458 MessageCounter "-";
+CM_ SG_ 458 Checksum "-";
+CM_ SG_ 1255 MCO_TYPE_L1 "魔毯-目标物特征信号";
+CM_ SG_ 1255 MCO_DISTANCE_L1 "魔毯-目标物距离信号";
+CM_ SG_ 1255 MCO_LEVEL_L1 "魔毯-目标物高度信号";
+CM_ SG_ 1255 MCO_TYPE_L2 "None";
+CM_ SG_ 1255 MCO_DISTANCE_L2 "None";
+CM_ SG_ 1255 MCO_LEVEL_L2 "None";
+CM_ SG_ 1255 MCO_TYPE_L3 "None";
+CM_ SG_ 1255 MCO_DISTANCE_L3 "None";
+CM_ SG_ 1255 MCO_LEVEL_L3 "None";
+CM_ SG_ 1256 MCO_TYPE_R1 "None";
+CM_ SG_ 1256 MCO_DISTANCE_R1 "None";
+CM_ SG_ 1256 MCO_LEVEL_R1 "None";
+CM_ SG_ 1256 MCO_TYPE_R2 "None";
+CM_ SG_ 1256 MCO_DISTANCE_R2 "None";
+CM_ SG_ 1256 MCO_LEVEL_R2 "None";
+CM_ SG_ 1256 MCO_TYPE_R3 "None";
+CM_ SG_ 1256 MCO_DISTANCE_R3 "None";
+CM_ SG_ 1256 MCO_LEVEL_R3 "None";
+CM_ SG_ 1256 MC_FAULT_STS "None";
+CM_ SG_ 1256 MC_WORK_STS "None";
+
+
+BA_DEF_ BO_ "DiagConnection" STRING;
+BA_DEF_ BO_ "DiagFdOnly" ENUM "Yes", "No";
+BA_DEF_ BO_ "DiagRequest" ENUM "Yes", "No";
+BA_DEF_ BO_ "DiagResponse" ENUM "Yes", "No";
+BA_DEF_ BO_ "DiagState" ENUM "Yes", "No";
+BA_DEF_ BO_ "GenMsgCycleTime" INT 0 65535;
+BA_DEF_ BO_ "GenMsgCycleTimeFast" INT 0 65535;
+BA_DEF_ BO_ "GenMsgDelayTime" INT 0 65535;
+BA_DEF_ BO_ "GenMsgILSupport" ENUM "Yes", "No";
+BA_DEF_ BO_ "GenMsgNrOfRepetition" INT 0 65535;
+BA_DEF_ BO_ "GenMsgSendType" ENUM "NoSigSendType", "Cyclic", "Event";
+BA_DEF_ BO_ "GenMsgStartDelayTime" INT 0 65535;
+BA_DEF_ BO_ "GenSigInactiveValue" INT 0 65535;
+BA_DEF_ BO_ "GenSigSendType" ENUM "Cyclic", "OnWrite", "OnWriteWithRepetition", "OnChange", "OnChangeWithRepetition", "IfActive", "IfActiveWithRepeition","NoSigSendType";
+BA_DEF_ BO_ "GenSigTimeoutTime" INT 0 65535;
+BA_DEF_ BO_ "NmAsrMessage" ENUM "Yes", "No";
+BA_DEF_ BO_ "VFrameFormat" ENUM  "StandardCAN","ExtendedCAN","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","StandardCAN_FD","ExtendedCAN_FD";
+BA_DEF_ SG_ "GenSigStartValue" FLOAT 0 100000000000;
+BA_DEF_  "BusType" STRING;
+BA_DEF_DEF_ "BusType" "CAN";
+BA_DEF_DEF_ "DiagConnection" "0x0";
+BA_DEF_DEF_ "DiagFdOnly" "No";
+BA_DEF_DEF_ "DiagRequest" "No";
+BA_DEF_DEF_ "DiagResponse" "No";
+BA_DEF_DEF_ "DiagState" "No";
+BA_DEF_DEF_ "GenMsgCycleTime" 0;
+BA_DEF_DEF_ "GenMsgCycleTimeFast" 0;
+BA_DEF_DEF_ "GenMsgDelayTime" 0;
+BA_DEF_DEF_ "GenMsgILSupport" "Yes";
+BA_DEF_DEF_ "GenMsgNrOfRepetition" 0;
+BA_DEF_DEF_ "GenMsgSendType" "NoSigSendType";
+BA_DEF_DEF_ "GenMsgStartDelayTime" 0;
+BA_DEF_DEF_ "GenSigInactiveValue" 0;
+BA_DEF_DEF_ "GenSigSendType" "NoSigSendType";
+BA_DEF_DEF_ "GenSigTimeoutTime" 0;
+BA_DEF_DEF_ "NmAsrMessage" "No";
+
+BA_ "BusType"   "CAN FD";
+
+BA_ "GenMsgCycleTime" BO_ 2 10;
+BA_ "GenMsgSendType" BO_ 2 1;
+BA_ "GenSigSendType" BO_ 2 0;
+BA_ "VFrameFormat" BO_ 2 14;
+BA_ "GenMsgCycleTime" BO_ 390 10;
+BA_ "GenMsgSendType" BO_ 390 1;
+BA_ "GenSigSendType" BO_ 390 0;
+BA_ "VFrameFormat" BO_ 390 14;
+BA_ "GenMsgCycleTime" BO_ 403 10;
+BA_ "GenMsgSendType" BO_ 403 1;
+BA_ "GenSigSendType" BO_ 403 0;
+BA_ "VFrameFormat" BO_ 403 14;
+BA_ "GenMsgCycleTime" BO_ 682 20;
+BA_ "GenMsgSendType" BO_ 682 1;
+BA_ "GenSigSendType" BO_ 682 0;
+BA_ "VFrameFormat" BO_ 682 14;
+BA_ "GenMsgCycleTime" BO_ 459 10;
+BA_ "GenMsgSendType" BO_ 459 1;
+BA_ "GenSigSendType" BO_ 459 0;
+BA_ "VFrameFormat" BO_ 459 14;
+BA_ "GenMsgCycleTime" BO_ 581 20;
+BA_ "GenMsgSendType" BO_ 581 1;
+BA_ "GenSigSendType" BO_ 581 0;
+BA_ "VFrameFormat" BO_ 581 14;
+BA_ "GenMsgCycleTime" BO_ 644 20;
+BA_ "GenMsgSendType" BO_ 644 1;
+BA_ "GenSigSendType" BO_ 644 0;
+BA_ "VFrameFormat" BO_ 644 14;
+BA_ "GenMsgCycleTime" BO_ 645 20;
+BA_ "GenMsgSendType" BO_ 645 1;
+BA_ "GenSigSendType" BO_ 645 0;
+BA_ "VFrameFormat" BO_ 645 14;
+BA_ "GenMsgCycleTime" BO_ 646 20;
+BA_ "GenMsgSendType" BO_ 646 1;
+BA_ "GenSigSendType" BO_ 646 0;
+BA_ "VFrameFormat" BO_ 646 14;
+BA_ "GenMsgCycleTime" BO_ 658 20;
+BA_ "GenMsgSendType" BO_ 658 1;
+BA_ "GenSigSendType" BO_ 658 0;
+BA_ "VFrameFormat" BO_ 658 14;
+BA_ "GenMsgCycleTime" BO_ 852 40;
+BA_ "GenMsgSendType" BO_ 852 1;
+BA_ "GenSigSendType" BO_ 852 0;
+BA_ "VFrameFormat" BO_ 852 14;
+BA_ "GenMsgCycleTime" BO_ 576 20;
+BA_ "GenMsgSendType" BO_ 576 1;
+BA_ "GenSigSendType" BO_ 576 0;
+BA_ "VFrameFormat" BO_ 576 14;
+BA_ "GenMsgCycleTime" BO_ 1388 100;
+BA_ "GenMsgSendType" BO_ 1388 1;
+BA_ "GenSigSendType" BO_ 1388 0;
+BA_ "VFrameFormat" BO_ 1388 14;
+BA_ "GenMsgCycleTime" BO_ 1418 20;
+BA_ "GenMsgSendType" BO_ 1418 1;
+BA_ "GenSigSendType" BO_ 1418 0;
+BA_ "VFrameFormat" BO_ 1418 14;
+BA_ "GenMsgCycleTime" BO_ 456 20;
+BA_ "GenMsgSendType" BO_ 456 1;
+BA_ "GenSigSendType" BO_ 456 0;
+BA_ "VFrameFormat" BO_ 456 14;
+BA_ "GenMsgCycleTime" BO_ 455 10;
+BA_ "GenMsgSendType" BO_ 455 1;
+BA_ "GenSigSendType" BO_ 455 0;
+BA_ "VFrameFormat" BO_ 455 14;
+BA_ "GenMsgCycleTime" BO_ 457 20;
+BA_ "GenMsgSendType" BO_ 457 1;
+BA_ "GenSigSendType" BO_ 457 0;
+BA_ "VFrameFormat" BO_ 457 14;
+BA_ "GenMsgCycleTime" BO_ 691 20;
+BA_ "GenMsgSendType" BO_ 691 1;
+BA_ "GenSigSendType" BO_ 691 0;
+BA_ "VFrameFormat" BO_ 691 14;
+BA_ "GenMsgCycleTime" BO_ 387 10;
+BA_ "GenMsgSendType" BO_ 387 1;
+BA_ "GenSigSendType" BO_ 387 0;
+BA_ "VFrameFormat" BO_ 387 14;
+BA_ "GenMsgCycleTime" BO_ 384 10;
+BA_ "GenMsgSendType" BO_ 384 1;
+BA_ "GenSigSendType" BO_ 384 0;
+BA_ "VFrameFormat" BO_ 384 14;
+BA_ "GenMsgCycleTime" BO_ 1361 100;
+BA_ "GenMsgSendType" BO_ 1361 1;
+BA_ "GenSigSendType" BO_ 1361 0;
+BA_ "VFrameFormat" BO_ 1361 14;
+BA_ "GenMsgCycleTime" BO_ 458 20;
+BA_ "GenMsgSendType" BO_ 458 1;
+BA_ "GenSigSendType" BO_ 458 0;
+BA_ "VFrameFormat" BO_ 458 14;
+BA_ "GenMsgCycleTime" BO_ 1255 50;
+BA_ "GenMsgSendType" BO_ 1255 1;
+BA_ "GenSigSendType" BO_ 1255 0;
+BA_ "VFrameFormat" BO_ 1255 14;
+BA_ "GenMsgCycleTime" BO_ 1256 50;
+BA_ "GenMsgSendType" BO_ 1256 1;
+BA_ "GenSigSendType" BO_ 1256 0;
+BA_ "VFrameFormat" BO_ 1256 14;
+
+
+VAL_ 2 LWSTRIM 0 "Unfinish" 1 "Finish";
+VAL_ 2 LWSCAL 0 "Unfinish" 1 "Finish";
+VAL_ 2 LWSOK 0 "Abnormal" 1 "Normal";
+VAL_ 390 EPS_DrvAngCmdAbortFeedback 0 "No error(正常工作)" 1 "Driver Interference（驾驶员干预触发）" 2 "Vehicle speed Invalid(车速超限大于155kph)" 3 "Abnormal CAN Input (ADAS相关CAN信号无效）" 4 "Request Angle Slope over range" 5 "Request Angle Value over range" 6 "Internal Fault (EPS出现内部可恢复故障）" 7 "EPS Failure (EPS严重故障）" 8 "Reserved" 9 "Reserved" 10 "Reserved" 11 "Reserved" 12 "Reserved" 13 "Reserved" 14 "Reserved";
+VAL_ 390 EPS_DrvStrgWhlVbnLvlResp 4 "reserved" 5 "reserved" 6 "reserved" 7 "reserved" 11 "No request" 27 "level1" 267 "level2" 283 "level3";
+VAL_ 390 EPS_AD_status 0 "Inactive" 1 "LKA active" 2 "APA active" 3 "ESS active";
+VAL_ 390 EPS_AngOverR 0 "Not over range" 1 "Over range";
+VAL_ 390 EPS_AngSpdOverR 0 "Not over range" 1 "Over range";
+VAL_ 390 EPS_LKA_TRQ 0 "" 1 "" 2 "" 3 "";
+VAL_ 390 EPS_LKA_TRQQF 0 "Signal not available" 1 "Signal available";
+VAL_ 390 EPS_FAIL 0 "Temporary inhibit" 1 "Available for control" 2 "Active" 3 "Permanently failed";
+VAL_ 390 FAIL_IN_STS 0 "Normal" 1 "Abnormal";
+VAL_ 390 EPS_SWTRQ_QF 0 "SteerWhlTrq signal available" 1 "SteerWhlTrq signal not available";
+VAL_ 390 EPS_SWTRQ 0 "" 1 "" 2 "" 3 "" 4 "" 5 "" 6 "" 7 "" 8 "" 9 "" 10 "" 11 "" 12 "" 13 "" 14 "" 15 "";
+VAL_ 390 EPS_CNT 0 "" 1 "" 2 "" 3 "" 4 "" 5 "" 6 "" 7 "" 8 "" 9 "" 10 "" 11 "" 12 "" 13 "" 14 "" 15 "";
+VAL_ 390 EPS_SUM 0 "" 1 "" 2 "" 3 "" 4 "" 5 "" 6 "" 7 "" 8 "" 9 "" 10 "" 11 "" 12 "" 13 "" 14 "" 15 "" 16 "" 17 "" 18 "" 19 "" 20 "" 21 "" 22 "" 23 "" 24 "" 25 "" 26 "" 27 "" 28 "" 29 "" 30 "" 31 "" 32 "" 33 "" 34 "" 35 "" 36 "" 37 "" 38 "" 39 "" 40 "" 41 "" 42 "" 43 "" 44 "" 45 "" 46 "" 47 "" 48 "" 49 "" 50 "" 51 "" 52 "" 53 "" 54 "" 55 "" 56 "" 57 "" 58 "" 59 "" 60 "" 61 "" 62 "" 63 "" 64 "" 65 "" 66 "" 67 "" 68 "" 69 "" 70 "" 71 "" 72 "" 73 "" 74 "" 75 "" 76 "" 77 "" 78 "" 79 "" 80 "" 81 "" 82 "" 83 "" 84 "" 85 "" 86 "" 87 "" 88 "" 89 "" 90 "" 91 "" 92 "" 93 "" 94 "" 95 "" 96 "" 97 "" 98 "" 99 "" 100 "" 101 "" 102 "" 103 "" 104 "" 105 "" 106 "" 107 "" 108 "" 109 "" 110 "" 111 "" 112 "" 113 "" 114 "" 115 "" 116 "" 117 "" 118 "" 119 "" 120 "" 121 "" 122 "" 123 "" 124 "" 125 "" 126 "" 127 "" 128 "" 129 "" 130 "" 131 "" 132 "" 133 "" 134 "" 135 "" 136 "" 137 "" 138 "" 139 "" 140 "" 141 "" 142 "" 143 "" 144 "" 145 "" 146 "" 147 "" 148 "" 149 "" 150 "" 151 "" 152 "" 153 "" 154 "" 155 "" 156 "" 157 "" 158 "" 159 "" 160 "" 161 "" 162 "" 163 "" 164 "" 165 "" 166 "" 167 "" 168 "" 169 "" 170 "" 171 "" 172 "" 173 "" 174 "" 175 "" 176 "" 177 "" 178 "" 179 "" 180 "" 181 "" 182 "" 183 "" 184 "" 185 "" 186 "" 187 "" 188 "" 189 "" 190 "" 191 "" 192 "" 193 "" 194 "" 195 "" 196 "" 197 "" 198 "" 199 "" 200 "" 201 "" 202 "" 203 "" 204 "" 205 "" 206 "" 207 "" 208 "" 209 "" 210 "" 211 "" 212 "" 213 "" 214 "" 215 "" 216 "" 217 "" 218 "" 219 "" 220 "" 221 "" 222 "" 223 "" 224 "" 225 "" 226 "" 227 "" 228 "" 229 "" 230 "" 231 "" 232 "" 233 "" 234 "" 235 "" 236 "" 237 "" 238 "" 239 "" 240 "" 241 "" 242 "" 243 "" 244 "" 245 "" 246 "" 247 "" 248 "" 249 "" 250 "" 251 "" 252 "" 253 "" 254 "" 255 "";
+VAL_ 403 EPS_CONAV 0 "" 1 "" 2 "" 3 "" 4 "" 5 "" 6 "" 7 "" 8 "" 9 "" 10 "" 11 "" 12 "" 13 "" 14 "" 15 "" 16 "" 17 "" 18 "" 19 "" 20 "" 21 "" 22 "" 23 "" 24 "" 25 "" 26 "" 27 "" 28 "" 29 "" 30 "" 31 "" 32 "" 33 "" 34 "" 35 "" 36 "" 37 "" 38 "" 39 "" 40 "" 41 "" 42 "" 43 "" 44 "" 45 "" 46 "" 47 "" 48 "" 49 "" 50 "" 51 "" 52 "" 53 "" 54 "" 55 "" 56 "" 57 "" 58 "" 59 "" 60 "" 61 "" 62 "" 63 "" 64 "" 65 "" 66 "" 67 "" 68 "" 69 "" 70 "" 71 "" 72 "" 73 "" 74 "" 75 "" 76 "" 77 "" 78 "" 79 "" 80 "" 81 "" 82 "" 83 "" 84 "" 85 "" 86 "" 87 "" 88 "" 89 "" 90 "" 91 "" 92 "" 93 "" 94 "" 95 "" 96 "" 97 "" 98 "" 99 "" 100 "" 101 "" 102 "" 103 "" 104 "" 105 "" 106 "" 107 "" 108 "" 109 "" 110 "" 111 "" 112 "" 113 "" 114 "" 115 "" 116 "" 117 "" 118 "" 119 "" 120 "" 121 "" 122 "" 123 "" 124 "" 125 "" 126 "" 127 "" 128 "" 129 "" 130 "" 131 "" 132 "" 133 "" 134 "" 135 "" 136 "" 137 "" 138 "" 139 "" 140 "" 141 "" 142 "" 143 "" 144 "" 145 "" 146 "" 147 "" 148 "" 149 "" 150 "" 151 "" 152 "" 153 "" 154 "" 155 "" 156 "" 157 "" 158 "" 159 "" 160 "" 161 "" 162 "" 163 "" 164 "" 165 "" 166 "" 167 "" 168 "" 169 "" 170 "" 171 "" 172 "" 173 "" 174 "" 175 "" 176 "" 177 "" 178 "" 179 "" 180 "" 181 "" 182 "" 183 "" 184 "" 185 "" 186 "" 187 "" 188 "" 189 "" 190 "" 191 "" 192 "" 193 "" 194 "" 195 "" 196 "" 197 "" 198 "" 199 "" 200 "" 201 "" 202 "" 203 "" 204 "" 205 "" 206 "" 207 "" 208 "" 209 "" 210 "" 211 "" 212 "" 213 "" 214 "" 215 "" 216 "" 217 "" 218 "" 219 "" 220 "" 221 "" 222 "" 223 "" 224 "" 225 "" 226 "" 227 "" 228 "" 229 "" 230 "" 231 "" 232 "" 233 "" 234 "" 235 "" 236 "" 237 "" 238 "" 239 "" 240 "" 241 "" 242 "" 243 "" 244 "" 245 "" 246 "" 247 "" 248 "" 249 "" 250 "" 251 "" 252 "" 253 "" 254 "" 255 "";
+VAL_ 403 EPS_CONA_QF 0 "EPS Control Angle signal available" 1 "EPS Control Angle signal not available";
+VAL_ 403 DriveModeStatus 0 "Not initialized" 1 "Standard" 2 "Sport" 3 "comfort";
+VAL_ 403 EPS_CNT 0 "" 1 "" 2 "" 3 "" 4 "" 5 "" 6 "" 7 "" 8 "" 9 "" 10 "" 11 "" 12 "" 13 "" 14 "" 15 "";
+VAL_ 403 EPS_SUM 0 "" 1 "" 2 "" 3 "" 4 "" 5 "" 6 "" 7 "" 8 "" 9 "" 10 "" 11 "" 12 "" 13 "" 14 "" 15 "" 16 "" 17 "" 18 "" 19 "" 20 "" 21 "" 22 "" 23 "" 24 "" 25 "" 26 "" 27 "" 28 "" 29 "" 30 "" 31 "" 32 "" 33 "" 34 "" 35 "" 36 "" 37 "" 38 "" 39 "" 40 "" 41 "" 42 "" 43 "" 44 "" 45 "" 46 "" 47 "" 48 "" 49 "" 50 "" 51 "" 52 "" 53 "" 54 "" 55 "" 56 "" 57 "" 58 "" 59 "" 60 "" 61 "" 62 "" 63 "" 64 "" 65 "" 66 "" 67 "" 68 "" 69 "" 70 "" 71 "" 72 "" 73 "" 74 "" 75 "" 76 "" 77 "" 78 "" 79 "" 80 "" 81 "" 82 "" 83 "" 84 "" 85 "" 86 "" 87 "" 88 "" 89 "" 90 "" 91 "" 92 "" 93 "" 94 "" 95 "" 96 "" 97 "" 98 "" 99 "" 100 "" 101 "" 102 "" 103 "" 104 "" 105 "" 106 "" 107 "" 108 "" 109 "" 110 "" 111 "" 112 "" 113 "" 114 "" 115 "" 116 "" 117 "" 118 "" 119 "" 120 "" 121 "" 122 "" 123 "" 124 "" 125 "" 126 "" 127 "" 128 "" 129 "" 130 "" 131 "" 132 "" 133 "" 134 "" 135 "" 136 "" 137 "" 138 "" 139 "" 140 "" 141 "" 142 "" 143 "" 144 "" 145 "" 146 "" 147 "" 148 "" 149 "" 150 "" 151 "" 152 "" 153 "" 154 "" 155 "" 156 "" 157 "" 158 "" 159 "" 160 "" 161 "" 162 "" 163 "" 164 "" 165 "" 166 "" 167 "" 168 "" 169 "" 170 "" 171 "" 172 "" 173 "" 174 "" 175 "" 176 "" 177 "" 178 "" 179 "" 180 "" 181 "" 182 "" 183 "" 184 "" 185 "" 186 "" 187 "" 188 "" 189 "" 190 "" 191 "" 192 "" 193 "" 194 "" 195 "" 196 "" 197 "" 198 "" 199 "" 200 "" 201 "" 202 "" 203 "" 204 "" 205 "" 206 "" 207 "" 208 "" 209 "" 210 "" 211 "" 212 "" 213 "" 214 "" 215 "" 216 "" 217 "" 218 "" 219 "" 220 "" 221 "" 222 "" 223 "" 224 "" 225 "" 226 "" 227 "" 228 "" 229 "" 230 "" 231 "" 232 "" 233 "" 234 "" 235 "" 236 "" 237 "" 238 "" 239 "" 240 "" 241 "" 242 "" 243 "" 244 "" 245 "" 246 "" 247 "" 248 "" 249 "" 250 "" 251 "" 252 "" 253 "" 254 "" 255 "";
+VAL_ 682 ADAS_PTC_STATUS 0 "OFF" 1 "ACC Protocal" 2 "APA Protocal" 3 "reserve";
+VAL_ 682 SIGNAL_SOURCING 0 "no signal" 1 "AEB operation" 2 "EAPM operation" 3 "invalid";
+VAL_ 682 AEB_ENBL 0 "AEB not Enable" 1 "AEB Enable";
+VAL_ 682 AEB_STATUS 0 "AEB not operation" 1 "AEB operation";
+VAL_ 682 AEB_ALIVE 0 "abnormal" 1 "normal";
+VAL_ 682 PREFILL_ENBL 0 "Prefill not Enable" 1 "Prefill Enable";
+VAL_ 682 PREFILL_STATUS 0 "Prefill not operation" 1 "Prefill operation";
+VAL_ 682 PREFILL_ALIVE 0 "abnormal" 1 "normal";
+VAL_ 682 ABA_ENBL 0 "ABA not Enable" 1 "ABA Enable";
+VAL_ 682 ABA_STATUS 0 "ABA not operation" 1 "ABA operation";
+VAL_ 682 ABA_ALIVE 0 "abnormal" 1 "normal";
+VAL_ 682 AWB_ENBL 0 "AWB not Enable" 1 "AWB Enable";
+VAL_ 682 AWB_STATUS 0 "AWB not operation" 1 "AWB operation";
+VAL_ 682 AWB_ALIVE 0 "abnormal" 1 "normal";
+VAL_ 682 ACC_CDD_ENBL 0 "ACC_CDD not Enable" 1 "ACC_CDD Enable";
+VAL_ 682 ACC_CDD_STATUS 0 "ACC_CDD not operation" 1 "ACC_CDD operation(pressure on)";
+VAL_ 682 ACC_CDD_ALIVE 0 "abnormal" 1 "normal";
+VAL_ 682 ACC_CDD_TEMP 0 "not off" 1 "off";
+VAL_ 682 EAPM_ENBL 0 "not Enable" 1 "Enable";
+VAL_ 682 EAPM_Status 0 "EAPM not operation" 1 "EAPM operation";
+VAL_ 682 EAPM_Alive 0 "abnormal" 1 "normal";
+VAL_ 682 WCBF_EXIST 0 "No brake force" 1 "Brake force exists";
+VAL_ 682 VEH_STD_STILL 0 "Vehicle is not standstill" 1 "Vehicle is standstill" 2 "Reserved" 3 "Invalid";
+VAL_ 682 MSG_CNT 0 "" 1 "" 2 "" 3 "" 4 "" 5 "" 6 "" 7 "" 8 "" 9 "" 10 "" 11 "" 12 "" 13 "" 14 "" 15 "";
+VAL_ 682 CHKSUM 0 "" 1 "" 2 "" 3 "" 4 "" 5 "" 6 "" 7 "" 8 "" 9 "" 10 "" 11 "" 12 "" 13 "" 14 "" 15 "" 16 "" 17 "" 18 "" 19 "" 20 "" 21 "" 22 "" 23 "" 24 "" 25 "" 26 "" 27 "" 28 "" 29 "" 30 "" 31 "" 32 "" 33 "" 34 "" 35 "" 36 "" 37 "" 38 "" 39 "" 40 "" 41 "" 42 "" 43 "" 44 "" 45 "" 46 "" 47 "" 48 "" 49 "" 50 "" 51 "" 52 "" 53 "" 54 "" 55 "" 56 "" 57 "" 58 "" 59 "" 60 "" 61 "" 62 "" 63 "" 64 "" 65 "" 66 "" 67 "" 68 "" 69 "" 70 "" 71 "" 72 "" 73 "" 74 "" 75 "" 76 "" 77 "" 78 "" 79 "" 80 "" 81 "" 82 "" 83 "" 84 "" 85 "" 86 "" 87 "" 88 "" 89 "" 90 "" 91 "" 92 "" 93 "" 94 "" 95 "" 96 "" 97 "" 98 "" 99 "" 100 "" 101 "" 102 "" 103 "" 104 "" 105 "" 106 "" 107 "" 108 "" 109 "" 110 "" 111 "" 112 "" 113 "" 114 "" 115 "" 116 "" 117 "" 118 "" 119 "" 120 "" 121 "" 122 "" 123 "" 124 "" 125 "" 126 "" 127 "" 128 "" 129 "" 130 "" 131 "" 132 "" 133 "" 134 "" 135 "" 136 "" 137 "" 138 "" 139 "" 140 "" 141 "" 142 "" 143 "" 144 "" 145 "" 146 "" 147 "" 148 "" 149 "" 150 "" 151 "" 152 "" 153 "" 154 "" 155 "" 156 "" 157 "" 158 "" 159 "" 160 "" 161 "" 162 "" 163 "" 164 "" 165 "" 166 "" 167 "" 168 "" 169 "" 170 "" 171 "" 172 "" 173 "" 174 "" 175 "" 176 "" 177 "" 178 "" 179 "" 180 "" 181 "" 182 "" 183 "" 184 "" 185 "" 186 "" 187 "" 188 "" 189 "" 190 "" 191 "" 192 "" 193 "" 194 "" 195 "" 196 "" 197 "" 198 "" 199 "" 200 "" 201 "" 202 "" 203 "" 204 "" 205 "" 206 "" 207 "" 208 "" 209 "" 210 "" 211 "" 212 "" 213 "" 214 "" 215 "" 216 "" 217 "" 218 "" 219 "" 220 "" 221 "" 222 "" 223 "" 224 "" 225 "" 226 "" 227 "" 228 "" 229 "" 230 "" 231 "" 232 "" 233 "" 234 "" 235 "" 236 "" 237 "" 238 "" 239 "" 240 "" 241 "" 242 "" 243 "" 244 "" 245 "" 246 "" 247 "" 248 "" 249 "" 250 "" 251 "" 252 "" 253 "" 254 "" 255 "";
+VAL_ 459 MbRgnTrgtWhl 0 "" 1 "" 2 "" 3 "" 4 "" 5 "" 6 "" 7 "" 8 "" 9 "" 10 "" 11 "" 12 "" 13 "" 14 "" 15 "" 16 "" 17 "" 18 "" 19 "" 20 "" 21 "" 22 "" 23 "" 24 "" 25 "" 26 "" 27 "" 28 "" 29 "" 30 "" 31 "" 32 "" 33 "" 34 "" 35 "" 36 "" 37 "" 38 "" 39 "" 40 "" 41 "" 42 "" 43 "" 44 "" 45 "" 46 "" 47 "" 48 "" 49 "" 50 "" 51 "" 52 "" 53 "" 54 "" 55 "" 56 "" 57 "" 58 "" 59 "" 60 "" 61 "" 62 "" 63 "" 64 "" 65 "" 66 "" 67 "" 68 "" 69 "" 70 "" 71 "" 72 "" 73 "" 74 "" 75 "" 76 "" 77 "" 78 "" 79 "" 80 "" 81 "" 82 "" 83 "" 84 "" 85 "" 86 "" 87 "" 88 "" 89 "" 90 "" 91 "" 92 "" 93 "" 94 "" 95 "" 96 "" 97 "" 98 "" 99 "" 100 "" 101 "" 102 "" 103 "" 104 "" 105 "" 106 "" 107 "" 108 "" 109 "" 110 "" 111 "" 112 "" 113 "" 114 "" 115 "" 116 "" 117 "" 118 "" 119 "" 120 "" 121 "" 122 "" 123 "" 124 "" 125 "" 126 "" 127 "" 128 "" 129 "" 130 "" 131 "" 132 "" 133 "" 134 "" 135 "" 136 "" 137 "" 138 "" 139 "" 140 "" 141 "" 142 "" 143 "" 144 "" 145 "" 146 "" 147 "" 148 "" 149 "" 150 "" 151 "" 152 "" 153 "" 154 "" 155 "" 156 "" 157 "" 158 "" 159 "" 160 "" 161 "" 162 "" 163 "" 164 "" 165 "" 166 "" 167 "" 168 "" 169 "" 170 "" 171 "" 172 "" 173 "" 174 "" 175 "" 176 "" 177 "" 178 "" 179 "" 180 "" 181 "" 182 "" 183 "" 184 "" 185 "" 186 "" 187 "" 188 "" 189 "" 190 "" 191 "" 192 "" 193 "" 194 "" 195 "" 196 "" 197 "" 198 "" 199 "" 200 "" 201 "" 202 "" 203 "" 204 "" 205 "" 206 "" 207 "" 208 "" 209 "" 210 "" 211 "" 212 "" 213 "" 214 "" 215 "" 216 "" 217 "" 218 "" 219 "" 220 "" 221 "" 222 "" 223 "" 224 "" 225 "" 226 "" 227 "" 228 "" 229 "" 230 "" 231 "" 232 "" 233 "" 234 "" 235 "" 236 "" 237 "" 238 "" 239 "" 240 "" 241 "" 242 "" 243 "" 244 "" 245 "" 246 "" 247 "" 248 "" 249 "" 250 "" 251 "" 252 "" 253 "" 254 "" 255 "";
+VAL_ 459 MbRgnTrgtWhlQu 0 "NotIntialized" 1 "Normal" 2 "Faulty" 3 "Not used";
+VAL_ 459 BSTERPRE 0 "" 1 "" 2 "" 3 "" 4 "" 5 "" 6 "" 7 "" 8 "" 9 "" 10 "" 11 "" 12 "" 13 "" 14 "" 15 "" 16 "" 17 "" 18 "" 19 "" 20 "" 21 "" 22 "" 23 "" 24 "" 25 "" 26 "" 27 "" 28 "" 29 "" 30 "" 31 "" 32 "" 33 "" 34 "" 35 "" 36 "" 37 "" 38 "" 39 "" 40 "" 41 "" 42 "" 43 "" 44 "" 45 "" 46 "" 47 "" 48 "" 49 "" 50 "" 51 "" 52 "" 53 "" 54 "" 55 "" 56 "" 57 "" 58 "" 59 "" 60 "" 61 "" 62 "" 63 "";
+VAL_ 459 RBSACT 0 "RBS not in regulation" 1 "RBS in regulation";
+VAL_ 459 RBSFAIL 0 "RBS not malfunction (normal)" 1 "RBS malfunction";
+VAL_ 459 MSGCNTR 0 "" 1 "" 2 "" 3 "" 4 "" 5 "" 6 "" 7 "" 8 "" 9 "" 10 "" 11 "" 12 "" 13 "" 14 "" 15 "";
+VAL_ 459 CHKSUM 0 "" 1 "" 2 "" 3 "" 4 "" 5 "" 6 "" 7 "" 8 "" 9 "" 10 "" 11 "" 12 "" 13 "" 14 "" 15 "" 16 "" 17 "" 18 "" 19 "" 20 "" 21 "" 22 "" 23 "" 24 "" 25 "" 26 "" 27 "" 28 "" 29 "" 30 "" 31 "" 32 "" 33 "" 34 "" 35 "" 36 "" 37 "" 38 "" 39 "" 40 "" 41 "" 42 "" 43 "" 44 "" 45 "" 46 "" 47 "" 48 "" 49 "" 50 "" 51 "" 52 "" 53 "" 54 "" 55 "" 56 "" 57 "" 58 "" 59 "" 60 "" 61 "" 62 "" 63 "" 64 "" 65 "" 66 "" 67 "" 68 "" 69 "" 70 "" 71 "" 72 "" 73 "" 74 "" 75 "" 76 "" 77 "" 78 "" 79 "" 80 "" 81 "" 82 "" 83 "" 84 "" 85 "" 86 "" 87 "" 88 "" 89 "" 90 "" 91 "" 92 "" 93 "" 94 "" 95 "" 96 "" 97 "" 98 "" 99 "" 100 "" 101 "" 102 "" 103 "" 104 "" 105 "" 106 "" 107 "" 108 "" 109 "" 110 "" 111 "" 112 "" 113 "" 114 "" 115 "" 116 "" 117 "" 118 "" 119 "" 120 "" 121 "" 122 "" 123 "" 124 "" 125 "" 126 "" 127 "" 128 "" 129 "" 130 "" 131 "" 132 "" 133 "" 134 "" 135 "" 136 "" 137 "" 138 "" 139 "" 140 "" 141 "" 142 "" 143 "" 144 "" 145 "" 146 "" 147 "" 148 "" 149 "" 150 "" 151 "" 152 "" 153 "" 154 "" 155 "" 156 "" 157 "" 158 "" 159 "" 160 "" 161 "" 162 "" 163 "" 164 "" 165 "" 166 "" 167 "" 168 "" 169 "" 170 "" 171 "" 172 "" 173 "" 174 "" 175 "" 176 "" 177 "" 178 "" 179 "" 180 "" 181 "" 182 "" 183 "" 184 "" 185 "" 186 "" 187 "" 188 "" 189 "" 190 "" 191 "" 192 "" 193 "" 194 "" 195 "" 196 "" 197 "" 198 "" 199 "" 200 "" 201 "" 202 "" 203 "" 204 "" 205 "" 206 "" 207 "" 208 "" 209 "" 210 "" 211 "" 212 "" 213 "" 214 "" 215 "" 216 "" 217 "" 218 "" 219 "" 220 "" 221 "" 222 "" 223 "" 224 "" 225 "" 226 "" 227 "" 228 "" 229 "" 230 "" 231 "" 232 "" 233 "" 234 "" 235 "" 236 "" 237 "" 238 "" 239 "" 240 "" 241 "" 242 "" 243 "" 244 "" 245 "" 246 "" 247 "" 248 "" 249 "" 250 "" 251 "" 252 "" 253 "" 254 "" 255 "";
+VAL_ 581 VDCFAIL 0 "no VDC(ESP) malfunction" 1 "VDC(ESP) malfunction";
+VAL_ 581 OFF_SW 0 "VDC(ESP) available" 1 "VDC(ESP) disabled by the driver";
+VAL_ 581 TCSACT 0 "no TCS(ASR) regulation" 1 "TSC(ASR) in regulation";
+VAL_ 581 VDCACT 0 "no VDC(AYC) regulation" 1 "VDC(AYC) in regulation";
+VAL_ 581 MSRACT 0 "no MSR regulation" 1 "MSR regulation";
+VAL_ 581 TCSFAIL 0 "no TCS(ASR) malfunction" 1 "TCS(ASR) malfunction";
+VAL_ 581 MSGCNTRR1 0 "" 1 "" 2 "" 3 "";
+VAL_ 644 WRFR 0 "" 1 "" 2 "" 3 "" 4 "" 5 "" 6 "" 7 "" 8 "" 9 "" 10 "" 11 "" 12 "" 13 "" 14 "" 15 "" 16 "" 17 "" 18 "" 19 "" 20 "" 21 "" 22 "" 23 "" 24 "" 25 "" 26 "" 27 "" 28 "" 29 "" 30 "" 31 "" 32 "" 33 "" 34 "" 35 "" 36 "" 37 "" 38 "" 39 "" 40 "" 41 "" 42 "" 43 "" 44 "" 45 "" 46 "" 47 "" 48 "" 49 "" 50 "" 51 "" 52 "" 53 "" 54 "" 55 "" 56 "" 57 "" 58 "" 59 "" 60 "" 61 "" 62 "" 63 "" 64 "" 65 "" 66 "" 67 "" 68 "" 69 "" 70 "" 71 "" 72 "" 73 "" 74 "" 75 "" 76 "" 77 "" 78 "" 79 "" 80 "" 81 "" 82 "" 83 "" 84 "" 85 "" 86 "" 87 "" 88 "" 89 "" 90 "" 91 "" 92 "" 93 "" 94 "" 95 "" 96 "" 97 "" 98 "" 99 "" 100 "" 101 "" 102 "" 103 "" 104 "" 105 "" 106 "" 107 "" 108 "" 109 "" 110 "" 111 "" 112 "" 113 "" 114 "" 115 "" 116 "" 117 "" 118 "" 119 "" 120 "" 121 "" 122 "" 123 "" 124 "" 125 "" 126 "" 127 "" 128 "" 129 "" 130 "" 131 "" 132 "" 133 "" 134 "" 135 "" 136 "" 137 "" 138 "" 139 "" 140 "" 141 "" 142 "" 143 "" 144 "" 145 "" 146 "" 147 "" 148 "" 149 "" 150 "" 151 "" 152 "" 153 "" 154 "" 155 "" 156 "" 157 "" 158 "" 159 "" 160 "" 161 "" 162 "" 163 "" 164 "" 165 "" 166 "" 167 "" 168 "" 169 "" 170 "" 171 "" 172 "" 173 "" 174 "" 175 "" 176 "" 177 "" 178 "" 179 "" 180 "" 181 "" 182 "" 183 "" 184 "" 185 "" 186 "" 187 "" 188 "" 189 "" 190 "" 191 "" 192 "" 193 "" 194 "" 195 "" 196 "" 197 "" 198 "" 199 "" 200 "" 201 "" 202 "" 203 "" 204 "" 205 "" 206 "" 207 "" 208 "" 209 "" 210 "" 211 "" 212 "" 213 "" 214 "" 215 "" 216 "" 217 "" 218 "" 219 "" 220 "" 221 "" 222 "" 223 "" 224 "" 225 "" 226 "" 227 "" 228 "" 229 "" 230 "" 231 "" 232 "" 233 "" 234 "" 235 "" 236 "" 237 "" 238 "" 239 "" 240 "" 241 "" 242 "" 243 "" 244 "" 245 "" 246 "" 247 "" 248 "" 249 "" 250 "" 251 "" 252 "" 253 "" 254 "" 255 "";
+VAL_ 644 WRFL 0 "" 1 "" 2 "" 3 "" 4 "" 5 "" 6 "" 7 "" 8 "" 9 "" 10 "" 11 "" 12 "" 13 "" 14 "" 15 "" 16 "" 17 "" 18 "" 19 "" 20 "" 21 "" 22 "" 23 "" 24 "" 25 "" 26 "" 27 "" 28 "" 29 "" 30 "" 31 "" 32 "" 33 "" 34 "" 35 "" 36 "" 37 "" 38 "" 39 "" 40 "" 41 "" 42 "" 43 "" 44 "" 45 "" 46 "" 47 "" 48 "" 49 "" 50 "" 51 "" 52 "" 53 "" 54 "" 55 "" 56 "" 57 "" 58 "" 59 "" 60 "" 61 "" 62 "" 63 "" 64 "" 65 "" 66 "" 67 "" 68 "" 69 "" 70 "" 71 "" 72 "" 73 "" 74 "" 75 "" 76 "" 77 "" 78 "" 79 "" 80 "" 81 "" 82 "" 83 "" 84 "" 85 "" 86 "" 87 "" 88 "" 89 "" 90 "" 91 "" 92 "" 93 "" 94 "" 95 "" 96 "" 97 "" 98 "" 99 "" 100 "" 101 "" 102 "" 103 "" 104 "" 105 "" 106 "" 107 "" 108 "" 109 "" 110 "" 111 "" 112 "" 113 "" 114 "" 115 "" 116 "" 117 "" 118 "" 119 "" 120 "" 121 "" 122 "" 123 "" 124 "" 125 "" 126 "" 127 "" 128 "" 129 "" 130 "" 131 "" 132 "" 133 "" 134 "" 135 "" 136 "" 137 "" 138 "" 139 "" 140 "" 141 "" 142 "" 143 "" 144 "" 145 "" 146 "" 147 "" 148 "" 149 "" 150 "" 151 "" 152 "" 153 "" 154 "" 155 "" 156 "" 157 "" 158 "" 159 "" 160 "" 161 "" 162 "" 163 "" 164 "" 165 "" 166 "" 167 "" 168 "" 169 "" 170 "" 171 "" 172 "" 173 "" 174 "" 175 "" 176 "" 177 "" 178 "" 179 "" 180 "" 181 "" 182 "" 183 "" 184 "" 185 "" 186 "" 187 "" 188 "" 189 "" 190 "" 191 "" 192 "" 193 "" 194 "" 195 "" 196 "" 197 "" 198 "" 199 "" 200 "" 201 "" 202 "" 203 "" 204 "" 205 "" 206 "" 207 "" 208 "" 209 "" 210 "" 211 "" 212 "" 213 "" 214 "" 215 "" 216 "" 217 "" 218 "" 219 "" 220 "" 221 "" 222 "" 223 "" 224 "" 225 "" 226 "" 227 "" 228 "" 229 "" 230 "" 231 "" 232 "" 233 "" 234 "" 235 "" 236 "" 237 "" 238 "" 239 "" 240 "" 241 "" 242 "" 243 "" 244 "" 245 "" 246 "" 247 "" 248 "" 249 "" 250 "" 251 "" 252 "" 253 "" 254 "" 255 "";
+VAL_ 644 VSO 0 "" 1 "" 2 "" 3 "" 4 "" 5 "" 6 "" 7 "" 8 "" 9 "" 10 "" 11 "" 12 "" 13 "" 14 "" 15 "" 16 "" 17 "" 18 "" 19 "" 20 "" 21 "" 22 "" 23 "" 24 "" 25 "" 26 "" 27 "" 28 "" 29 "" 30 "" 31 "" 32 "" 33 "" 34 "" 35 "" 36 "" 37 "" 38 "" 39 "" 40 "" 41 "" 42 "" 43 "" 44 "" 45 "" 46 "" 47 "" 48 "" 49 "" 50 "" 51 "" 52 "" 53 "" 54 "" 55 "" 56 "" 57 "" 58 "" 59 "" 60 "" 61 "" 62 "" 63 "" 64 "" 65 "" 66 "" 67 "" 68 "" 69 "" 70 "" 71 "" 72 "" 73 "" 74 "" 75 "" 76 "" 77 "" 78 "" 79 "" 80 "" 81 "" 82 "" 83 "" 84 "" 85 "" 86 "" 87 "" 88 "" 89 "" 90 "" 91 "" 92 "" 93 "" 94 "" 95 "" 96 "" 97 "" 98 "" 99 "" 100 "" 101 "" 102 "" 103 "" 104 "" 105 "" 106 "" 107 "" 108 "" 109 "" 110 "" 111 "" 112 "" 113 "" 114 "" 115 "" 116 "" 117 "" 118 "" 119 "" 120 "" 121 "" 122 "" 123 "" 124 "" 125 "" 126 "" 127 "" 128 "" 129 "" 130 "" 131 "" 132 "" 133 "" 134 "" 135 "" 136 "" 137 "" 138 "" 139 "" 140 "" 141 "" 142 "" 143 "" 144 "" 145 "" 146 "" 147 "" 148 "" 149 "" 150 "" 151 "" 152 "" 153 "" 154 "" 155 "" 156 "" 157 "" 158 "" 159 "" 160 "" 161 "" 162 "" 163 "" 164 "" 165 "" 166 "" 167 "" 168 "" 169 "" 170 "" 171 "" 172 "" 173 "" 174 "" 175 "" 176 "" 177 "" 178 "" 179 "" 180 "" 181 "" 182 "" 183 "" 184 "" 185 "" 186 "" 187 "" 188 "" 189 "" 190 "" 191 "" 192 "" 193 "" 194 "" 195 "" 196 "" 197 "" 198 "" 199 "" 200 "" 201 "" 202 "" 203 "" 204 "" 205 "" 206 "" 207 "" 208 "" 209 "" 210 "" 211 "" 212 "" 213 "" 214 "" 215 "" 216 "" 217 "" 218 "" 219 "" 220 "" 221 "" 222 "" 223 "" 224 "" 225 "" 226 "" 227 "" 228 "" 229 "" 230 "" 231 "" 232 "" 233 "" 234 "" 235 "" 236 "" 237 "" 238 "" 239 "" 240 "" 241 "" 242 "" 243 "" 244 "" 245 "" 246 "" 247 "" 248 "" 249 "" 250 "" 251 "" 252 "" 253 "" 254 "" 255 "";
+VAL_ 644 MSGCOUNT 0 "" 1 "" 2 "" 3 "" 4 "" 5 "" 6 "" 7 "" 8 "" 9 "" 10 "" 11 "" 12 "" 13 "" 14 "" 15 "" 16 "" 17 "" 18 "" 19 "" 20 "" 21 "" 22 "" 23 "" 24 "" 25 "" 26 "" 27 "" 28 "" 29 "" 30 "" 31 "" 32 "" 33 "" 34 "" 35 "" 36 "" 37 "" 38 "" 39 "" 40 "" 41 "" 42 "" 43 "" 44 "" 45 "" 46 "" 47 "" 48 "" 49 "" 50 "" 51 "" 52 "" 53 "" 54 "" 55 "" 56 "" 57 "" 58 "" 59 "" 60 "" 61 "" 62 "" 63 "" 64 "" 65 "" 66 "" 67 "" 68 "" 69 "" 70 "" 71 "" 72 "" 73 "" 74 "" 75 "" 76 "" 77 "" 78 "" 79 "" 80 "" 81 "" 82 "" 83 "" 84 "" 85 "" 86 "" 87 "" 88 "" 89 "" 90 "" 91 "" 92 "" 93 "" 94 "" 95 "" 96 "" 97 "" 98 "" 99 "" 100 "" 101 "" 102 "" 103 "" 104 "" 105 "" 106 "" 107 "" 108 "" 109 "" 110 "" 111 "" 112 "" 113 "" 114 "" 115 "" 116 "" 117 "" 118 "" 119 "" 120 "" 121 "" 122 "" 123 "" 124 "" 125 "" 126 "" 127 "" 128 "" 129 "" 130 "" 131 "" 132 "" 133 "" 134 "" 135 "" 136 "" 137 "" 138 "" 139 "" 140 "" 141 "" 142 "" 143 "" 144 "" 145 "" 146 "" 147 "" 148 "" 149 "" 150 "" 151 "" 152 "" 153 "" 154 "" 155 "" 156 "" 157 "" 158 "" 159 "" 160 "" 161 "" 162 "" 163 "" 164 "" 165 "" 166 "" 167 "" 168 "" 169 "" 170 "" 171 "" 172 "" 173 "" 174 "" 175 "" 176 "" 177 "" 178 "" 179 "" 180 "" 181 "" 182 "" 183 "" 184 "" 185 "" 186 "" 187 "" 188 "" 189 "" 190 "" 191 "" 192 "" 193 "" 194 "" 195 "" 196 "" 197 "" 198 "" 199 "" 200 "" 201 "" 202 "" 203 "" 204 "" 205 "" 206 "" 207 "" 208 "" 209 "" 210 "" 211 "" 212 "" 213 "" 214 "" 215 "" 216 "" 217 "" 218 "" 219 "" 220 "" 221 "" 222 "" 223 "" 224 "" 225 "" 226 "" 227 "" 228 "" 229 "" 230 "" 231 "" 232 "" 233 "" 234 "" 235 "" 236 "" 237 "" 238 "" 239 "" 240 "" 241 "" 242 "" 243 "" 244 "" 245 "" 246 "" 247 "" 248 "" 249 "" 250 "" 251 "" 252 "" 253 "" 254 "" 255 "";
+VAL_ 644 CHKSUMFR 0 "" 1 "" 2 "" 3 "" 4 "" 5 "" 6 "" 7 "" 8 "" 9 "" 10 "" 11 "" 12 "" 13 "" 14 "" 15 "" 16 "" 17 "" 18 "" 19 "" 20 "" 21 "" 22 "" 23 "" 24 "" 25 "" 26 "" 27 "" 28 "" 29 "" 30 "" 31 "" 32 "" 33 "" 34 "" 35 "" 36 "" 37 "" 38 "" 39 "" 40 "" 41 "" 42 "" 43 "" 44 "" 45 "" 46 "" 47 "" 48 "" 49 "" 50 "" 51 "" 52 "" 53 "" 54 "" 55 "" 56 "" 57 "" 58 "" 59 "" 60 "" 61 "" 62 "" 63 "" 64 "" 65 "" 66 "" 67 "" 68 "" 69 "" 70 "" 71 "" 72 "" 73 "" 74 "" 75 "" 76 "" 77 "" 78 "" 79 "" 80 "" 81 "" 82 "" 83 "" 84 "" 85 "" 86 "" 87 "" 88 "" 89 "" 90 "" 91 "" 92 "" 93 "" 94 "" 95 "" 96 "" 97 "" 98 "" 99 "" 100 "" 101 "" 102 "" 103 "" 104 "" 105 "" 106 "" 107 "" 108 "" 109 "" 110 "" 111 "" 112 "" 113 "" 114 "" 115 "" 116 "" 117 "" 118 "" 119 "" 120 "" 121 "" 122 "" 123 "" 124 "" 125 "" 126 "" 127 "" 128 "" 129 "" 130 "" 131 "" 132 "" 133 "" 134 "" 135 "" 136 "" 137 "" 138 "" 139 "" 140 "" 141 "" 142 "" 143 "" 144 "" 145 "" 146 "" 147 "" 148 "" 149 "" 150 "" 151 "" 152 "" 153 "" 154 "" 155 "" 156 "" 157 "" 158 "" 159 "" 160 "" 161 "" 162 "" 163 "" 164 "" 165 "" 166 "" 167 "" 168 "" 169 "" 170 "" 171 "" 172 "" 173 "" 174 "" 175 "" 176 "" 177 "" 178 "" 179 "" 180 "" 181 "" 182 "" 183 "" 184 "" 185 "" 186 "" 187 "" 188 "" 189 "" 190 "" 191 "" 192 "" 193 "" 194 "" 195 "" 196 "" 197 "" 198 "" 199 "" 200 "" 201 "" 202 "" 203 "" 204 "" 205 "" 206 "" 207 "" 208 "" 209 "" 210 "" 211 "" 212 "" 213 "" 214 "" 215 "" 216 "" 217 "" 218 "" 219 "" 220 "" 221 "" 222 "" 223 "" 224 "" 225 "" 226 "" 227 "" 228 "" 229 "" 230 "" 231 "" 232 "" 233 "" 234 "" 235 "" 236 "" 237 "" 238 "" 239 "" 240 "" 241 "" 242 "" 243 "" 244 "" 245 "" 246 "" 247 "" 248 "" 249 "" 250 "" 251 "" 252 "" 253 "" 254 "" 255 "";
+VAL_ 645 WRRR 0 "" 1 "" 2 "" 3 "" 4 "" 5 "" 6 "" 7 "" 8 "" 9 "" 10 "" 11 "" 12 "" 13 "" 14 "" 15 "" 16 "" 17 "" 18 "" 19 "" 20 "" 21 "" 22 "" 23 "" 24 "" 25 "" 26 "" 27 "" 28 "" 29 "" 30 "" 31 "" 32 "" 33 "" 34 "" 35 "" 36 "" 37 "" 38 "" 39 "" 40 "" 41 "" 42 "" 43 "" 44 "" 45 "" 46 "" 47 "" 48 "" 49 "" 50 "" 51 "" 52 "" 53 "" 54 "" 55 "" 56 "" 57 "" 58 "" 59 "" 60 "" 61 "" 62 "" 63 "" 64 "" 65 "" 66 "" 67 "" 68 "" 69 "" 70 "" 71 "" 72 "" 73 "" 74 "" 75 "" 76 "" 77 "" 78 "" 79 "" 80 "" 81 "" 82 "" 83 "" 84 "" 85 "" 86 "" 87 "" 88 "" 89 "" 90 "" 91 "" 92 "" 93 "" 94 "" 95 "" 96 "" 97 "" 98 "" 99 "" 100 "" 101 "" 102 "" 103 "" 104 "" 105 "" 106 "" 107 "" 108 "" 109 "" 110 "" 111 "" 112 "" 113 "" 114 "" 115 "" 116 "" 117 "" 118 "" 119 "" 120 "" 121 "" 122 "" 123 "" 124 "" 125 "" 126 "" 127 "" 128 "" 129 "" 130 "" 131 "" 132 "" 133 "" 134 "" 135 "" 136 "" 137 "" 138 "" 139 "" 140 "" 141 "" 142 "" 143 "" 144 "" 145 "" 146 "" 147 "" 148 "" 149 "" 150 "" 151 "" 152 "" 153 "" 154 "" 155 "" 156 "" 157 "" 158 "" 159 "" 160 "" 161 "" 162 "" 163 "" 164 "" 165 "" 166 "" 167 "" 168 "" 169 "" 170 "" 171 "" 172 "" 173 "" 174 "" 175 "" 176 "" 177 "" 178 "" 179 "" 180 "" 181 "" 182 "" 183 "" 184 "" 185 "" 186 "" 187 "" 188 "" 189 "" 190 "" 191 "" 192 "" 193 "" 194 "" 195 "" 196 "" 197 "" 198 "" 199 "" 200 "" 201 "" 202 "" 203 "" 204 "" 205 "" 206 "" 207 "" 208 "" 209 "" 210 "" 211 "" 212 "" 213 "" 214 "" 215 "" 216 "" 217 "" 218 "" 219 "" 220 "" 221 "" 222 "" 223 "" 224 "" 225 "" 226 "" 227 "" 228 "" 229 "" 230 "" 231 "" 232 "" 233 "" 234 "" 235 "" 236 "" 237 "" 238 "" 239 "" 240 "" 241 "" 242 "" 243 "" 244 "" 245 "" 246 "" 247 "" 248 "" 249 "" 250 "" 251 "" 252 "" 253 "" 254 "" 255 "";
+VAL_ 645 WRRL 0 "" 1 "" 2 "" 3 "" 4 "" 5 "" 6 "" 7 "" 8 "" 9 "" 10 "" 11 "" 12 "" 13 "" 14 "" 15 "" 16 "" 17 "" 18 "" 19 "" 20 "" 21 "" 22 "" 23 "" 24 "" 25 "" 26 "" 27 "" 28 "" 29 "" 30 "" 31 "" 32 "" 33 "" 34 "" 35 "" 36 "" 37 "" 38 "" 39 "" 40 "" 41 "" 42 "" 43 "" 44 "" 45 "" 46 "" 47 "" 48 "" 49 "" 50 "" 51 "" 52 "" 53 "" 54 "" 55 "" 56 "" 57 "" 58 "" 59 "" 60 "" 61 "" 62 "" 63 "" 64 "" 65 "" 66 "" 67 "" 68 "" 69 "" 70 "" 71 "" 72 "" 73 "" 74 "" 75 "" 76 "" 77 "" 78 "" 79 "" 80 "" 81 "" 82 "" 83 "" 84 "" 85 "" 86 "" 87 "" 88 "" 89 "" 90 "" 91 "" 92 "" 93 "" 94 "" 95 "" 96 "" 97 "" 98 "" 99 "" 100 "" 101 "" 102 "" 103 "" 104 "" 105 "" 106 "" 107 "" 108 "" 109 "" 110 "" 111 "" 112 "" 113 "" 114 "" 115 "" 116 "" 117 "" 118 "" 119 "" 120 "" 121 "" 122 "" 123 "" 124 "" 125 "" 126 "" 127 "" 128 "" 129 "" 130 "" 131 "" 132 "" 133 "" 134 "" 135 "" 136 "" 137 "" 138 "" 139 "" 140 "" 141 "" 142 "" 143 "" 144 "" 145 "" 146 "" 147 "" 148 "" 149 "" 150 "" 151 "" 152 "" 153 "" 154 "" 155 "" 156 "" 157 "" 158 "" 159 "" 160 "" 161 "" 162 "" 163 "" 164 "" 165 "" 166 "" 167 "" 168 "" 169 "" 170 "" 171 "" 172 "" 173 "" 174 "" 175 "" 176 "" 177 "" 178 "" 179 "" 180 "" 181 "" 182 "" 183 "" 184 "" 185 "" 186 "" 187 "" 188 "" 189 "" 190 "" 191 "" 192 "" 193 "" 194 "" 195 "" 196 "" 197 "" 198 "" 199 "" 200 "" 201 "" 202 "" 203 "" 204 "" 205 "" 206 "" 207 "" 208 "" 209 "" 210 "" 211 "" 212 "" 213 "" 214 "" 215 "" 216 "" 217 "" 218 "" 219 "" 220 "" 221 "" 222 "" 223 "" 224 "" 225 "" 226 "" 227 "" 228 "" 229 "" 230 "" 231 "" 232 "" 233 "" 234 "" 235 "" 236 "" 237 "" 238 "" 239 "" 240 "" 241 "" 242 "" 243 "" 244 "" 245 "" 246 "" 247 "" 248 "" 249 "" 250 "" 251 "" 252 "" 253 "" 254 "" 255 "";
+VAL_ 645 VCVT 0 "" 1 "" 2 "" 3 "" 4 "" 5 "" 6 "" 7 "" 8 "" 9 "" 10 "" 11 "" 12 "" 13 "" 14 "" 15 "" 16 "" 17 "" 18 "" 19 "" 20 "" 21 "" 22 "" 23 "" 24 "" 25 "" 26 "" 27 "" 28 "" 29 "" 30 "" 31 "" 32 "" 33 "" 34 "" 35 "" 36 "" 37 "" 38 "" 39 "" 40 "" 41 "" 42 "" 43 "" 44 "" 45 "" 46 "" 47 "" 48 "" 49 "" 50 "" 51 "" 52 "" 53 "" 54 "" 55 "" 56 "" 57 "" 58 "" 59 "" 60 "" 61 "" 62 "" 63 "" 64 "" 65 "" 66 "" 67 "" 68 "" 69 "" 70 "" 71 "" 72 "" 73 "" 74 "" 75 "" 76 "" 77 "" 78 "" 79 "" 80 "" 81 "" 82 "" 83 "" 84 "" 85 "" 86 "" 87 "" 88 "" 89 "" 90 "" 91 "" 92 "" 93 "" 94 "" 95 "" 96 "" 97 "" 98 "" 99 "" 100 "" 101 "" 102 "" 103 "" 104 "" 105 "" 106 "" 107 "" 108 "" 109 "" 110 "" 111 "" 112 "" 113 "" 114 "" 115 "" 116 "" 117 "" 118 "" 119 "" 120 "" 121 "" 122 "" 123 "" 124 "" 125 "" 126 "" 127 "" 128 "" 129 "" 130 "" 131 "" 132 "" 133 "" 134 "" 135 "" 136 "" 137 "" 138 "" 139 "" 140 "" 141 "" 142 "" 143 "" 144 "" 145 "" 146 "" 147 "" 148 "" 149 "" 150 "" 151 "" 152 "" 153 "" 154 "" 155 "" 156 "" 157 "" 158 "" 159 "" 160 "" 161 "" 162 "" 163 "" 164 "" 165 "" 166 "" 167 "" 168 "" 169 "" 170 "" 171 "" 172 "" 173 "" 174 "" 175 "" 176 "" 177 "" 178 "" 179 "" 180 "" 181 "" 182 "" 183 "" 184 "" 185 "" 186 "" 187 "" 188 "" 189 "" 190 "" 191 "" 192 "" 193 "" 194 "" 195 "" 196 "" 197 "" 198 "" 199 "" 200 "" 201 "" 202 "" 203 "" 204 "" 205 "" 206 "" 207 "" 208 "" 209 "" 210 "" 211 "" 212 "" 213 "" 214 "" 215 "" 216 "" 217 "" 218 "" 219 "" 220 "" 221 "" 222 "" 223 "" 224 "" 225 "" 226 "" 227 "" 228 "" 229 "" 230 "" 231 "" 232 "" 233 "" 234 "" 235 "" 236 "" 237 "" 238 "" 239 "" 240 "" 241 "" 242 "" 243 "" 244 "" 245 "" 246 "" 247 "" 248 "" 249 "" 250 "" 251 "" 252 "" 253 "" 254 "" 255 "";
+VAL_ 645 WDFL 0 "Standstill" 1 "Drive Wheel Front Direction" 2 "Drive Wheel Rear Direction" 3 "Unavailable";
+VAL_ 645 WDFR 0 "Standstill" 1 "Drive Wheel Front Direction" 2 "Drive Wheel Rear Direction" 3 "Unavailable";
+VAL_ 645 WDRL 0 "Standstill" 1 "Non Drive Wheel Front Direction" 2 "Non Drive Wheel Rear Direction" 3 "Unavailable";
+VAL_ 645 WDRR 0 "Standstill" 1 "Non Drive Wheel Front Direction" 2 "Non Drive Wheel Rear Direction" 3 "Unavailable";
+VAL_ 645 MSGCOUNT 0 "" 1 "" 2 "" 3 "" 4 "" 5 "" 6 "" 7 "" 8 "" 9 "" 10 "" 11 "" 12 "" 13 "" 14 "" 15 "" 16 "" 17 "" 18 "" 19 "" 20 "" 21 "" 22 "" 23 "" 24 "" 25 "" 26 "" 27 "" 28 "" 29 "" 30 "" 31 "" 32 "" 33 "" 34 "" 35 "" 36 "" 37 "" 38 "" 39 "" 40 "" 41 "" 42 "" 43 "" 44 "" 45 "" 46 "" 47 "" 48 "" 49 "" 50 "" 51 "" 52 "" 53 "" 54 "" 55 "" 56 "" 57 "" 58 "" 59 "" 60 "" 61 "" 62 "" 63 "" 64 "" 65 "" 66 "" 67 "" 68 "" 69 "" 70 "" 71 "" 72 "" 73 "" 74 "" 75 "" 76 "" 77 "" 78 "" 79 "" 80 "" 81 "" 82 "" 83 "" 84 "" 85 "" 86 "" 87 "" 88 "" 89 "" 90 "" 91 "" 92 "" 93 "" 94 "" 95 "" 96 "" 97 "" 98 "" 99 "" 100 "" 101 "" 102 "" 103 "" 104 "" 105 "" 106 "" 107 "" 108 "" 109 "" 110 "" 111 "" 112 "" 113 "" 114 "" 115 "" 116 "" 117 "" 118 "" 119 "" 120 "" 121 "" 122 "" 123 "" 124 "" 125 "" 126 "" 127 "" 128 "" 129 "" 130 "" 131 "" 132 "" 133 "" 134 "" 135 "" 136 "" 137 "" 138 "" 139 "" 140 "" 141 "" 142 "" 143 "" 144 "" 145 "" 146 "" 147 "" 148 "" 149 "" 150 "" 151 "" 152 "" 153 "" 154 "" 155 "" 156 "" 157 "" 158 "" 159 "" 160 "" 161 "" 162 "" 163 "" 164 "" 165 "" 166 "" 167 "" 168 "" 169 "" 170 "" 171 "" 172 "" 173 "" 174 "" 175 "" 176 "" 177 "" 178 "" 179 "" 180 "" 181 "" 182 "" 183 "" 184 "" 185 "" 186 "" 187 "" 188 "" 189 "" 190 "" 191 "" 192 "" 193 "" 194 "" 195 "" 196 "" 197 "" 198 "" 199 "" 200 "" 201 "" 202 "" 203 "" 204 "" 205 "" 206 "" 207 "" 208 "" 209 "" 210 "" 211 "" 212 "" 213 "" 214 "" 215 "" 216 "" 217 "" 218 "" 219 "" 220 "" 221 "" 222 "" 223 "" 224 "" 225 "" 226 "" 227 "" 228 "" 229 "" 230 "" 231 "" 232 "" 233 "" 234 "" 235 "" 236 "" 237 "" 238 "" 239 "" 240 "" 241 "" 242 "" 243 "" 244 "" 245 "" 246 "" 247 "" 248 "" 249 "" 250 "" 251 "" 252 "" 253 "" 254 "" 255 "";
+VAL_ 645 CHKSUMFR 0 "" 1 "" 2 "" 3 "" 4 "" 5 "" 6 "" 7 "" 8 "" 9 "" 10 "" 11 "" 12 "" 13 "" 14 "" 15 "" 16 "" 17 "" 18 "" 19 "" 20 "" 21 "" 22 "" 23 "" 24 "" 25 "" 26 "" 27 "" 28 "" 29 "" 30 "" 31 "" 32 "" 33 "" 34 "" 35 "" 36 "" 37 "" 38 "" 39 "" 40 "" 41 "" 42 "" 43 "" 44 "" 45 "" 46 "" 47 "" 48 "" 49 "" 50 "" 51 "" 52 "" 53 "" 54 "" 55 "" 56 "" 57 "" 58 "" 59 "" 60 "" 61 "" 62 "" 63 "" 64 "" 65 "" 66 "" 67 "" 68 "" 69 "" 70 "" 71 "" 72 "" 73 "" 74 "" 75 "" 76 "" 77 "" 78 "" 79 "" 80 "" 81 "" 82 "" 83 "" 84 "" 85 "" 86 "" 87 "" 88 "" 89 "" 90 "" 91 "" 92 "" 93 "" 94 "" 95 "" 96 "" 97 "" 98 "" 99 "" 100 "" 101 "" 102 "" 103 "" 104 "" 105 "" 106 "" 107 "" 108 "" 109 "" 110 "" 111 "" 112 "" 113 "" 114 "" 115 "" 116 "" 117 "" 118 "" 119 "" 120 "" 121 "" 122 "" 123 "" 124 "" 125 "" 126 "" 127 "" 128 "" 129 "" 130 "" 131 "" 132 "" 133 "" 134 "" 135 "" 136 "" 137 "" 138 "" 139 "" 140 "" 141 "" 142 "" 143 "" 144 "" 145 "" 146 "" 147 "" 148 "" 149 "" 150 "" 151 "" 152 "" 153 "" 154 "" 155 "" 156 "" 157 "" 158 "" 159 "" 160 "" 161 "" 162 "" 163 "" 164 "" 165 "" 166 "" 167 "" 168 "" 169 "" 170 "" 171 "" 172 "" 173 "" 174 "" 175 "" 176 "" 177 "" 178 "" 179 "" 180 "" 181 "" 182 "" 183 "" 184 "" 185 "" 186 "" 187 "" 188 "" 189 "" 190 "" 191 "" 192 "" 193 "" 194 "" 195 "" 196 "" 197 "" 198 "" 199 "" 200 "" 201 "" 202 "" 203 "" 204 "" 205 "" 206 "" 207 "" 208 "" 209 "" 210 "" 211 "" 212 "" 213 "" 214 "" 215 "" 216 "" 217 "" 218 "" 219 "" 220 "" 221 "" 222 "" 223 "" 224 "" 225 "" 226 "" 227 "" 228 "" 229 "" 230 "" 231 "" 232 "" 233 "" 234 "" 235 "" 236 "" 237 "" 238 "" 239 "" 240 "" 241 "" 242 "" 243 "" 244 "" 245 "" 246 "" 247 "" 248 "" 249 "" 250 "" 251 "" 252 "" 253 "" 254 "" 255 "";
+VAL_ 646 WTFL 0 "" 1 "";
+VAL_ 646 WTFR 0 "" 1 "" 2 "" 3 "" 4 "" 5 "" 6 "" 7 "" 8 "" 9 "" 10 "" 11 "" 12 "" 13 "" 14 "" 15 "" 16 "" 17 "" 18 "" 19 "" 20 "" 21 "" 22 "" 23 "" 24 "" 25 "" 26 "" 27 "" 28 "" 29 "" 30 "" 31 "" 32 "" 33 "" 34 "" 35 "" 36 "" 37 "" 38 "" 39 "" 40 "" 41 "" 42 "" 43 "" 44 "" 45 "" 46 "" 47 "" 48 "" 49 "" 50 "" 51 "" 52 "" 53 "" 54 "" 55 "" 56 "" 57 "" 58 "" 59 "" 60 "" 61 "" 62 "" 63 "" 64 "" 65 "" 66 "" 67 "" 68 "" 69 "" 70 "" 71 "" 72 "" 73 "" 74 "" 75 "" 76 "" 77 "" 78 "" 79 "" 80 "" 81 "" 82 "" 83 "" 84 "" 85 "" 86 "" 87 "" 88 "" 89 "" 90 "" 91 "" 92 "" 93 "" 94 "" 95 "" 96 "" 97 "" 98 "" 99 "" 100 "" 101 "" 102 "" 103 "" 104 "" 105 "" 106 "" 107 "" 108 "" 109 "" 110 "" 111 "" 112 "" 113 "" 114 "" 115 "" 116 "" 117 "" 118 "" 119 "" 120 "" 121 "" 122 "" 123 "" 124 "" 125 "" 126 "" 127 "";
+VAL_ 646 WTRL 0 "" 1 "" 2 "" 3 "" 4 "" 5 "" 6 "" 7 "" 8 "" 9 "" 10 "" 11 "" 12 "" 13 "" 14 "" 15 "" 16 "" 17 "" 18 "" 19 "" 20 "" 21 "" 22 "" 23 "" 24 "" 25 "" 26 "" 27 "" 28 "" 29 "" 30 "" 31 "" 32 "" 33 "" 34 "" 35 "" 36 "" 37 "" 38 "" 39 "" 40 "" 41 "" 42 "" 43 "" 44 "" 45 "" 46 "" 47 "" 48 "" 49 "" 50 "" 51 "" 52 "" 53 "" 54 "" 55 "" 56 "" 57 "" 58 "" 59 "" 60 "" 61 "" 62 "" 63 "" 64 "" 65 "" 66 "" 67 "" 68 "" 69 "" 70 "" 71 "" 72 "" 73 "" 74 "" 75 "" 76 "" 77 "" 78 "" 79 "" 80 "" 81 "" 82 "" 83 "" 84 "" 85 "" 86 "" 87 "" 88 "" 89 "" 90 "" 91 "" 92 "" 93 "" 94 "" 95 "" 96 "" 97 "" 98 "" 99 "" 100 "" 101 "" 102 "" 103 "" 104 "" 105 "" 106 "" 107 "" 108 "" 109 "" 110 "" 111 "" 112 "" 113 "" 114 "" 115 "" 116 "" 117 "" 118 "" 119 "" 120 "" 121 "" 122 "" 123 "" 124 "" 125 "" 126 "" 127 "";
+VAL_ 646 WTRR 0 "" 1 "" 2 "" 3 "" 4 "" 5 "" 6 "" 7 "" 8 "" 9 "" 10 "" 11 "" 12 "" 13 "" 14 "" 15 "" 16 "" 17 "" 18 "" 19 "" 20 "" 21 "" 22 "" 23 "" 24 "" 25 "" 26 "" 27 "" 28 "" 29 "" 30 "" 31 "" 32 "" 33 "" 34 "" 35 "" 36 "" 37 "" 38 "" 39 "" 40 "" 41 "" 42 "" 43 "" 44 "" 45 "" 46 "" 47 "" 48 "" 49 "" 50 "" 51 "" 52 "" 53 "" 54 "" 55 "" 56 "" 57 "" 58 "" 59 "" 60 "" 61 "" 62 "" 63 "";
+VAL_ 658 BSTERIRStro 0 "" 1 "" 2 "" 3 "";
+VAL_ 658 PSS_02 0 "" 1 "" 2 "" 3 "" 4 "" 5 "" 6 "" 7 "" 8 "" 9 "" 10 "" 11 "" 12 "" 13 "" 14 "" 15 "" 16 "" 17 "" 18 "" 19 "" 20 "" 21 "" 22 "" 23 "" 24 "" 25 "" 26 "" 27 "" 28 "" 29 "" 30 "" 31 "" 32 "" 33 "" 34 "" 35 "" 36 "" 37 "" 38 "" 39 "" 40 "" 41 "" 42 "" 43 "" 44 "" 45 "" 46 "" 47 "" 48 "" 49 "" 50 "" 51 "" 52 "" 53 "" 54 "" 55 "" 56 "" 57 "" 58 "" 59 "" 60 "" 61 "" 62 "" 63 "" 64 "" 65 "" 66 "" 67 "" 68 "" 69 "" 70 "" 71 "" 72 "" 73 "" 74 "" 75 "" 76 "" 77 "" 78 "" 79 "" 80 "" 81 "" 82 "" 83 "" 84 "" 85 "" 86 "" 87 "" 88 "" 89 "" 90 "" 91 "" 92 "" 93 "" 94 "" 95 "" 96 "" 97 "" 98 "" 99 "" 100 "" 101 "" 102 "" 103 "" 104 "" 105 "" 106 "" 107 "" 108 "" 109 "" 110 "" 111 "" 112 "" 113 "" 114 "" 115 "" 116 "" 117 "" 118 "" 119 "" 120 "" 121 "" 122 "" 123 "" 124 "" 125 "" 126 "" 127 "" 128 "" 129 "" 130 "" 131 "" 132 "" 133 "" 134 "" 135 "" 136 "" 137 "" 138 "" 139 "" 140 "" 141 "" 142 "" 143 "" 144 "" 145 "" 146 "" 147 "" 148 "" 149 "" 150 "" 151 "" 152 "" 153 "" 154 "" 155 "" 156 "" 157 "" 158 "" 159 "" 160 "" 161 "" 162 "" 163 "" 164 "" 165 "" 166 "" 167 "" 168 "" 169 "" 170 "" 171 "" 172 "" 173 "" 174 "" 175 "" 176 "" 177 "" 178 "" 179 "" 180 "" 181 "" 182 "" 183 "" 184 "" 185 "" 186 "" 187 "" 188 "" 189 "" 190 "" 191 "" 192 "" 193 "" 194 "" 195 "" 196 "" 197 "" 198 "" 199 "" 200 "" 201 "" 202 "" 203 "" 204 "" 205 "" 206 "" 207 "" 208 "" 209 "" 210 "" 211 "" 212 "" 213 "" 214 "" 215 "" 216 "" 217 "" 218 "" 219 "" 220 "" 221 "" 222 "" 223 "" 224 "" 225 "" 226 "" 227 "" 228 "" 229 "" 230 "" 231 "" 232 "" 233 "" 234 "" 235 "" 236 "" 237 "" 238 "" 239 "" 240 "" 241 "" 242 "" 243 "" 244 "" 245 "" 246 "" 247 "" 248 "" 249 "" 250 "" 251 "" 252 "" 253 "" 254 "" 255 "";
+VAL_ 658 CHCKSUM 0 "" 1 "" 2 "" 3 "" 4 "" 5 "" 6 "" 7 "" 8 "" 9 "" 10 "" 11 "" 12 "" 13 "" 14 "" 15 "";
+VAL_ 658 MVP_COUNT 0 "" 1 "" 2 "" 3 "";
+VAL_ 852 VSO 0 "" 1 "" 2 "" 3 "" 4 "" 5 "" 6 "" 7 "" 8 "" 9 "" 10 "" 11 "" 12 "" 13 "" 14 "" 15 "" 16 "" 17 "" 18 "" 19 "" 20 "" 21 "" 22 "" 23 "" 24 "" 25 "" 26 "" 27 "" 28 "" 29 "" 30 "" 31 "" 32 "" 33 "" 34 "" 35 "" 36 "" 37 "" 38 "" 39 "" 40 "" 41 "" 42 "" 43 "" 44 "" 45 "" 46 "" 47 "" 48 "" 49 "" 50 "" 51 "" 52 "" 53 "" 54 "" 55 "" 56 "" 57 "" 58 "" 59 "" 60 "" 61 "" 62 "" 63 "" 64 "" 65 "" 66 "" 67 "" 68 "" 69 "" 70 "" 71 "" 72 "" 73 "" 74 "" 75 "" 76 "" 77 "" 78 "" 79 "" 80 "" 81 "" 82 "" 83 "" 84 "" 85 "" 86 "" 87 "" 88 "" 89 "" 90 "" 91 "" 92 "" 93 "" 94 "" 95 "" 96 "" 97 "" 98 "" 99 "" 100 "" 101 "" 102 "" 103 "" 104 "" 105 "" 106 "" 107 "" 108 "" 109 "" 110 "" 111 "" 112 "" 113 "" 114 "" 115 "" 116 "" 117 "" 118 "" 119 "" 120 "" 121 "" 122 "" 123 "" 124 "" 125 "" 126 "" 127 "" 128 "" 129 "" 130 "" 131 "" 132 "" 133 "" 134 "" 135 "" 136 "" 137 "" 138 "" 139 "" 140 "" 141 "" 142 "" 143 "" 144 "" 145 "" 146 "" 147 "" 148 "" 149 "" 150 "" 151 "" 152 "" 153 "" 154 "" 155 "" 156 "" 157 "" 158 "" 159 "" 160 "" 161 "" 162 "" 163 "" 164 "" 165 "" 166 "" 167 "" 168 "" 169 "" 170 "" 171 "" 172 "" 173 "" 174 "" 175 "" 176 "" 177 "" 178 "" 179 "" 180 "" 181 "" 182 "" 183 "" 184 "" 185 "" 186 "" 187 "" 188 "" 189 "" 190 "" 191 "" 192 "" 193 "" 194 "" 195 "" 196 "" 197 "" 198 "" 199 "" 200 "" 201 "" 202 "" 203 "" 204 "" 205 "" 206 "" 207 "" 208 "" 209 "" 210 "" 211 "" 212 "" 213 "" 214 "" 215 "" 216 "" 217 "" 218 "" 219 "" 220 "" 221 "" 222 "" 223 "" 224 "" 225 "" 226 "" 227 "" 228 "" 229 "" 230 "" 231 "" 232 "" 233 "" 234 "" 235 "" 236 "" 237 "" 238 "" 239 "" 240 "" 241 "" 242 "" 243 "" 244 "" 245 "" 246 "" 247 "" 248 "" 249 "" 250 "" 251 "" 252 "" 253 "" 254 "" 255 "";
+VAL_ 852 WBF_TORQUE 0 "" 1 "" 2 "" 3 "" 4 "" 5 "" 6 "" 7 "" 8 "" 9 "" 10 "" 11 "" 12 "" 13 "" 14 "" 15 "" 16 "" 17 "" 18 "" 19 "" 20 "" 21 "" 22 "" 23 "" 24 "" 25 "" 26 "" 27 "" 28 "" 29 "" 30 "" 31 "" 32 "" 33 "" 34 "" 35 "" 36 "" 37 "" 38 "" 39 "" 40 "" 41 "" 42 "" 43 "" 44 "" 45 "" 46 "" 47 "" 48 "" 49 "" 50 "" 51 "" 52 "" 53 "" 54 "" 55 "" 56 "" 57 "" 58 "" 59 "" 60 "" 61 "" 62 "" 63 "";
+VAL_ 852 EBDACT 0 "EBV not regulating" 1 "EBV regulating";
+VAL_ 852 MSGCNTR 0 "" 1 "" 2 "" 3 "";
+VAL_ 852 ABSFAIL 0 "ABS OK" 1 "ABS malfunction";
+VAL_ 852 ABSACT 0 "ABS not in regulation" 1 "ABS in regulation";
+VAL_ 852 STPLMSW 0 "brake not active" 1 "brake active" 2 "Not used" 3 "invalid";
+VAL_ 852 BLR 0 "Not Request" 1 "Request";
+VAL_ 576 EPB_STAT 0 "Unknown state" 1 "Applied" 2 "Released" 3 "Applying" 4 "Releasing" 5 "System calibrating" 6 "Specific status" 7 "EPB lamps check";
+VAL_ 576 EPB_FAIL 0 "" 1 "Abnormal";
+VAL_ 576 DPB_STAT 0 "OFF" 1 "DPB operation by IBC" 2 "DPB operation by electro-caliper" 3 "Not Used";
+VAL_ 576 EPB_SW_STAT 0 "Netrual" 1 "Apply" 2 "invalid" 3 "reserved";
+VAL_ 576 EPB_ENBL 0 "EPB Enable" 1 "EPB not Enable";
+VAL_ 576 ALIVECOUNTER 0 "" 1 "" 2 "" 3 "" 4 "" 5 "" 6 "" 7 "" 8 "" 9 "" 10 "" 11 "" 12 "" 13 "" 14 "" 15 "";
+VAL_ 576 CHKSUM 0 "" 1 "" 2 "" 3 "" 4 "" 5 "" 6 "" 7 "" 8 "" 9 "" 10 "" 11 "" 12 "" 13 "" 14 "" 15 "" 16 "" 17 "" 18 "" 19 "" 20 "" 21 "" 22 "" 23 "" 24 "" 25 "" 26 "" 27 "" 28 "" 29 "" 30 "" 31 "" 32 "" 33 "" 34 "" 35 "" 36 "" 37 "" 38 "" 39 "" 40 "" 41 "" 42 "" 43 "" 44 "" 45 "" 46 "" 47 "" 48 "" 49 "" 50 "" 51 "" 52 "" 53 "" 54 "" 55 "" 56 "" 57 "" 58 "" 59 "" 60 "" 61 "" 62 "" 63 "" 64 "" 65 "" 66 "" 67 "" 68 "" 69 "" 70 "" 71 "" 72 "" 73 "" 74 "" 75 "" 76 "" 77 "" 78 "" 79 "" 80 "" 81 "" 82 "" 83 "" 84 "" 85 "" 86 "" 87 "" 88 "" 89 "" 90 "" 91 "" 92 "" 93 "" 94 "" 95 "" 96 "" 97 "" 98 "" 99 "" 100 "" 101 "" 102 "" 103 "" 104 "" 105 "" 106 "" 107 "" 108 "" 109 "" 110 "" 111 "" 112 "" 113 "" 114 "" 115 "" 116 "" 117 "" 118 "" 119 "" 120 "" 121 "" 122 "" 123 "" 124 "" 125 "" 126 "" 127 "" 128 "" 129 "" 130 "" 131 "" 132 "" 133 "" 134 "" 135 "" 136 "" 137 "" 138 "" 139 "" 140 "" 141 "" 142 "" 143 "" 144 "" 145 "" 146 "" 147 "" 148 "" 149 "" 150 "" 151 "" 152 "" 153 "" 154 "" 155 "" 156 "" 157 "" 158 "" 159 "" 160 "" 161 "" 162 "" 163 "" 164 "" 165 "" 166 "" 167 "" 168 "" 169 "" 170 "" 171 "" 172 "" 173 "" 174 "" 175 "" 176 "" 177 "" 178 "" 179 "" 180 "" 181 "" 182 "" 183 "" 184 "" 185 "" 186 "" 187 "" 188 "" 189 "" 190 "" 191 "" 192 "" 193 "" 194 "" 195 "" 196 "" 197 "" 198 "" 199 "" 200 "" 201 "" 202 "" 203 "" 204 "" 205 "" 206 "" 207 "" 208 "" 209 "" 210 "" 211 "" 212 "" 213 "" 214 "" 215 "" 216 "" 217 "" 218 "" 219 "" 220 "" 221 "" 222 "" 223 "" 224 "" 225 "" 226 "" 227 "" 228 "" 229 "" 230 "" 231 "" 232 "" 233 "" 234 "" 235 "" 236 "" 237 "" 238 "" 239 "" 240 "" 241 "" 242 "" 243 "" 244 "" 245 "" 246 "" 247 "" 248 "" 249 "" 250 "" 251 "" 252 "" 253 "" 254 "" 255 "";
+VAL_ 1388 IDM_ST_LAMP_RQ 0 "Lamp control is not require" 1 "Lamp blink controll is require";
+VAL_ 1418 AVH_OFFSW 0 "AVH not available" 1 "AVH available";
+VAL_ 1418 AVH_ACT 0 "AVH not operation" 1 "AVH operation";
+VAL_ 1418 AVH_FAIL 0 "" 1 "Abnormal";
+VAL_ 1418 CHKSUM 0 "" 1 "" 2 "" 3 "" 4 "" 5 "" 6 "" 7 "" 8 "" 9 "" 10 "" 11 "" 12 "" 13 "" 14 "" 15 "" 16 "" 17 "" 18 "" 19 "" 20 "" 21 "" 22 "" 23 "" 24 "" 25 "" 26 "" 27 "" 28 "" 29 "" 30 "" 31 "" 32 "" 33 "" 34 "" 35 "" 36 "" 37 "" 38 "" 39 "" 40 "" 41 "" 42 "" 43 "" 44 "" 45 "" 46 "" 47 "" 48 "" 49 "" 50 "" 51 "" 52 "" 53 "" 54 "" 55 "" 56 "" 57 "" 58 "" 59 "" 60 "" 61 "" 62 "" 63 "" 64 "" 65 "" 66 "" 67 "" 68 "" 69 "" 70 "" 71 "" 72 "" 73 "" 74 "" 75 "" 76 "" 77 "" 78 "" 79 "" 80 "" 81 "" 82 "" 83 "" 84 "" 85 "" 86 "" 87 "" 88 "" 89 "" 90 "" 91 "" 92 "" 93 "" 94 "" 95 "" 96 "" 97 "" 98 "" 99 "" 100 "" 101 "" 102 "" 103 "" 104 "" 105 "" 106 "" 107 "" 108 "" 109 "" 110 "" 111 "" 112 "" 113 "" 114 "" 115 "" 116 "" 117 "" 118 "" 119 "" 120 "" 121 "" 122 "" 123 "" 124 "" 125 "" 126 "" 127 "" 128 "" 129 "" 130 "" 131 "" 132 "" 133 "" 134 "" 135 "" 136 "" 137 "" 138 "" 139 "" 140 "" 141 "" 142 "" 143 "" 144 "" 145 "" 146 "" 147 "" 148 "" 149 "" 150 "" 151 "" 152 "" 153 "" 154 "" 155 "" 156 "" 157 "" 158 "" 159 "" 160 "" 161 "" 162 "" 163 "" 164 "" 165 "" 166 "" 167 "" 168 "" 169 "" 170 "" 171 "" 172 "" 173 "" 174 "" 175 "" 176 "" 177 "" 178 "" 179 "" 180 "" 181 "" 182 "" 183 "" 184 "" 185 "" 186 "" 187 "" 188 "" 189 "" 190 "" 191 "" 192 "" 193 "" 194 "" 195 "" 196 "" 197 "" 198 "" 199 "" 200 "" 201 "" 202 "" 203 "" 204 "" 205 "" 206 "" 207 "" 208 "" 209 "" 210 "" 211 "" 212 "" 213 "" 214 "" 215 "" 216 "" 217 "" 218 "" 219 "" 220 "" 221 "" 222 "" 223 "" 224 "" 225 "" 226 "" 227 "" 228 "" 229 "" 230 "" 231 "" 232 "" 233 "" 234 "" 235 "" 236 "" 237 "" 238 "" 239 "" 240 "" 241 "" 242 "" 243 "" 244 "" 245 "" 246 "" 247 "" 248 "" 249 "" 250 "" 251 "" 252 "" 253 "" 254 "" 255 "";
+VAL_ 456 AEB_AXTAR 0 "" 1 "" 2 "" 3 "" 4 "" 5 "" 6 "" 7 "" 8 "" 9 "" 10 "" 11 "" 12 "" 13 "" 14 "" 15 "" 16 "" 17 "" 18 "" 19 "" 20 "" 21 "" 22 "" 23 "" 24 "" 25 "" 26 "" 27 "" 28 "" 29 "" 30 "" 31 "" 32 "" 33 "" 34 "" 35 "" 36 "" 37 "" 38 "" 39 "" 40 "" 41 "" 42 "" 43 "" 44 "" 45 "" 46 "" 47 "" 48 "" 49 "" 50 "" 51 "" 52 "" 53 "" 54 "" 55 "" 56 "" 57 "" 58 "" 59 "" 60 "" 61 "" 62 "" 63 "" 64 "" 65 "" 66 "" 67 "" 68 "" 69 "" 70 "" 71 "" 72 "" 73 "" 74 "" 75 "" 76 "" 77 "" 78 "" 79 "" 80 "" 81 "" 82 "" 83 "" 84 "" 85 "" 86 "" 87 "" 88 "" 89 "" 90 "" 91 "" 92 "" 93 "" 94 "" 95 "" 96 "" 97 "" 98 "" 99 "" 100 "" 101 "" 102 "" 103 "" 104 "" 105 "" 106 "" 107 "" 108 "" 109 "" 110 "" 111 "" 112 "" 113 "" 114 "" 115 "" 116 "" 117 "" 118 "" 119 "" 120 "" 121 "" 122 "" 123 "" 124 "" 125 "" 126 "" 127 "" 128 "" 129 "" 130 "" 131 "" 132 "" 133 "" 134 "" 135 "" 136 "" 137 "" 138 "" 139 "" 140 "" 141 "" 142 "" 143 "" 144 "" 145 "" 146 "" 147 "" 148 "" 149 "" 150 "" 151 "" 152 "" 153 "" 154 "" 155 "" 156 "" 157 "" 158 "" 159 "" 160 "" 161 "" 162 "" 163 "" 164 "" 165 "" 166 "" 167 "" 168 "" 169 "" 170 "" 171 "" 172 "" 173 "" 174 "" 175 "" 176 "" 177 "" 178 "" 179 "" 180 "" 181 "" 182 "" 183 "" 184 "" 185 "" 186 "" 187 "" 188 "" 189 "" 190 "" 191 "" 192 "" 193 "" 194 "" 195 "" 196 "" 197 "" 198 "" 199 "" 200 "" 201 "" 202 "" 203 "" 204 "" 205 "" 206 "" 207 "" 208 "" 209 "" 210 "" 211 "" 212 "" 213 "" 214 "" 215 "" 216 "" 217 "" 218 "" 219 "" 220 "" 221 "" 222 "" 223 "" 224 "" 225 "" 226 "" 227 "" 228 "" 229 "" 230 "" 231 "" 232 "" 233 "" 234 "" 235 "" 236 "" 237 "" 238 "" 239 "" 240 "" 241 "" 242 "" 243 "" 244 "" 245 "" 246 "" 247 "" 248 "" 249 "" 250 "" 251 "" 252 "" 253 "" 254 "" 255 "";
+VAL_ 456 AEB_DecREQ 0 "No Request" 1 "Request";
+VAL_ 456 ABA_Level 0 "level 0 (no level)" 1 "level 1" 2 "level 2" 3 "level 3";
+VAL_ 456 ABA_REQ 0 "No Request" 1 "Request";
+VAL_ 456 AWB_Level 0 "no level" 1 "level 1" 2 "level 2" 3 "level 3" 4 "reserved" 5 "reserved" 6 "reserved";
+VAL_ 456 AWB_REQ 0 "No Request" 1 "Request";
+VAL_ 456 PREFILL_REQ 0 "No Request" 1 "Request";
+VAL_ 456 CPFunctionAlive 0 "normal" 1 "failure";
+VAL_ 456 CPFunctionAct 0 "off退出功能" 1 "active";
+VAL_ 456 CP_CDDReqVal 0 "" 1 "" 2 "" 3 "" 4 "" 5 "" 6 "" 7 "" 8 "" 9 "" 10 "" 11 "" 12 "" 13 "" 14 "" 15 "";
+VAL_ 456 CP_CDDReq 0 "No Request" 1 "Request";
+VAL_ 456 CP_DriveOff 0 "No Request" 1 "Request";
+VAL_ 456 CP_StandstillReq 0 "No Request" 1 "Request";
+VAL_ 456 EmFunctionActFlag 0 "No function active" 1 "AEB active" 2 "MEB active" 3 "FCTB active" 4 "RCTB active" 5 "Reserved" 6 "Reserved";
+VAL_ 456 ALIVE_CNT 0 "" 1 "" 2 "" 3 "" 4 "" 5 "" 6 "" 7 "" 8 "" 9 "" 10 "" 11 "" 12 "" 13 "" 14 "" 15 "";
+VAL_ 456 CHKSUM 0 "" 1 "" 2 "" 3 "" 4 "" 5 "" 6 "" 7 "" 8 "" 9 "" 10 "" 11 "" 12 "" 13 "" 14 "" 15 "" 16 "" 17 "" 18 "" 19 "" 20 "" 21 "" 22 "" 23 "" 24 "" 25 "" 26 "" 27 "" 28 "" 29 "" 30 "" 31 "" 32 "" 33 "" 34 "" 35 "" 36 "" 37 "" 38 "" 39 "" 40 "" 41 "" 42 "" 43 "" 44 "" 45 "" 46 "" 47 "" 48 "" 49 "" 50 "" 51 "" 52 "" 53 "" 54 "" 55 "" 56 "" 57 "" 58 "" 59 "" 60 "" 61 "" 62 "" 63 "" 64 "" 65 "" 66 "" 67 "" 68 "" 69 "" 70 "" 71 "" 72 "" 73 "" 74 "" 75 "" 76 "" 77 "" 78 "" 79 "" 80 "" 81 "" 82 "" 83 "" 84 "" 85 "" 86 "" 87 "" 88 "" 89 "" 90 "" 91 "" 92 "" 93 "" 94 "" 95 "" 96 "" 97 "" 98 "" 99 "" 100 "" 101 "" 102 "" 103 "" 104 "" 105 "" 106 "" 107 "" 108 "" 109 "" 110 "" 111 "" 112 "" 113 "" 114 "" 115 "" 116 "" 117 "" 118 "" 119 "" 120 "" 121 "" 122 "" 123 "" 124 "" 125 "" 126 "" 127 "" 128 "" 129 "" 130 "" 131 "" 132 "" 133 "" 134 "" 135 "" 136 "" 137 "" 138 "" 139 "" 140 "" 141 "" 142 "" 143 "" 144 "" 145 "" 146 "" 147 "" 148 "" 149 "" 150 "" 151 "" 152 "" 153 "" 154 "" 155 "" 156 "" 157 "" 158 "" 159 "" 160 "" 161 "" 162 "" 163 "" 164 "" 165 "" 166 "" 167 "" 168 "" 169 "" 170 "" 171 "" 172 "" 173 "" 174 "" 175 "" 176 "" 177 "" 178 "" 179 "" 180 "" 181 "" 182 "" 183 "" 184 "" 185 "" 186 "" 187 "" 188 "" 189 "" 190 "" 191 "" 192 "" 193 "" 194 "" 195 "" 196 "" 197 "" 198 "" 199 "" 200 "" 201 "" 202 "" 203 "" 204 "" 205 "" 206 "" 207 "" 208 "" 209 "" 210 "" 211 "" 212 "" 213 "" 214 "" 215 "" 216 "" 217 "" 218 "" 219 "" 220 "" 221 "" 222 "" 223 "" 224 "" 225 "" 226 "" 227 "" 228 "" 229 "" 230 "" 231 "" 232 "" 233 "" 234 "" 235 "" 236 "" 237 "" 238 "" 239 "" 240 "" 241 "" 242 "" 243 "" 244 "" 245 "" 246 "" 247 "" 248 "" 249 "" 250 "" 251 "" 252 "" 253 "" 254 "" 255 "";
+VAL_ 455 EAP_AXTAR 0 "" 1 "" 2 "" 3 "" 4 "" 5 "" 6 "" 7 "" 8 "" 9 "" 10 "" 11 "" 12 "" 13 "" 14 "" 15 "" 16 "" 17 "" 18 "" 19 "" 20 "" 21 "" 22 "" 23 "" 24 "" 25 "" 26 "" 27 "" 28 "" 29 "" 30 "" 31 "" 32 "" 33 "" 34 "" 35 "" 36 "" 37 "" 38 "" 39 "" 40 "" 41 "" 42 "" 43 "" 44 "" 45 "" 46 "" 47 "" 48 "" 49 "" 50 "" 51 "" 52 "" 53 "" 54 "" 55 "" 56 "" 57 "" 58 "" 59 "" 60 "" 61 "" 62 "" 63 "" 64 "" 65 "" 66 "" 67 "" 68 "" 69 "" 70 "" 71 "" 72 "" 73 "" 74 "" 75 "" 76 "" 77 "" 78 "" 79 "" 80 "" 81 "" 82 "" 83 "" 84 "" 85 "" 86 "" 87 "" 88 "" 89 "" 90 "" 91 "" 92 "" 93 "" 94 "" 95 "" 96 "" 97 "" 98 "" 99 "" 100 "" 101 "" 102 "" 103 "" 104 "" 105 "" 106 "" 107 "" 108 "" 109 "" 110 "" 111 "" 112 "" 113 "" 114 "" 115 "" 116 "" 117 "" 118 "" 119 "" 120 "" 121 "" 122 "" 123 "" 124 "" 125 "" 126 "" 127 "" 128 "" 129 "" 130 "" 131 "" 132 "" 133 "" 134 "" 135 "" 136 "" 137 "" 138 "" 139 "" 140 "" 141 "" 142 "" 143 "" 144 "" 145 "" 146 "" 147 "" 148 "" 149 "" 150 "" 151 "" 152 "" 153 "" 154 "" 155 "" 156 "" 157 "" 158 "" 159 "" 160 "" 161 "" 162 "" 163 "" 164 "" 165 "" 166 "" 167 "" 168 "" 169 "" 170 "" 171 "" 172 "" 173 "" 174 "" 175 "" 176 "" 177 "" 178 "" 179 "" 180 "" 181 "" 182 "" 183 "" 184 "" 185 "" 186 "" 187 "" 188 "" 189 "" 190 "" 191 "" 192 "" 193 "" 194 "" 195 "" 196 "" 197 "" 198 "" 199 "" 200 "" 201 "" 202 "" 203 "" 204 "" 205 "" 206 "" 207 "" 208 "" 209 "" 210 "" 211 "" 212 "" 213 "" 214 "" 215 "" 216 "" 217 "" 218 "" 219 "" 220 "" 221 "" 222 "" 223 "" 224 "" 225 "" 226 "" 227 "" 228 "" 229 "" 230 "" 231 "" 232 "" 233 "" 234 "" 235 "" 236 "" 237 "" 238 "" 239 "" 240 "" 241 "" 242 "" 243 "" 244 "" 245 "" 246 "" 247 "" 248 "" 249 "" 250 "" 251 "" 252 "" 253 "" 254 "" 255 "";
+VAL_ 455 EAP_DecREQ 0 "No Request" 1 "Request";
+VAL_ 455 MSG_CNT 0 "" 1 "" 2 "" 3 "" 4 "" 5 "" 6 "" 7 "" 8 "" 9 "" 10 "" 11 "" 12 "" 13 "" 14 "" 15 "";
+VAL_ 455 CHKSUM 0 "" 1 "" 2 "" 3 "" 4 "" 5 "" 6 "" 7 "" 8 "" 9 "" 10 "" 11 "" 12 "" 13 "" 14 "" 15 "" 16 "" 17 "" 18 "" 19 "" 20 "" 21 "" 22 "" 23 "" 24 "" 25 "" 26 "" 27 "" 28 "" 29 "" 30 "" 31 "" 32 "" 33 "" 34 "" 35 "" 36 "" 37 "" 38 "" 39 "" 40 "" 41 "" 42 "" 43 "" 44 "" 45 "" 46 "" 47 "" 48 "" 49 "" 50 "" 51 "" 52 "" 53 "" 54 "" 55 "" 56 "" 57 "" 58 "" 59 "" 60 "" 61 "" 62 "" 63 "" 64 "" 65 "" 66 "" 67 "" 68 "" 69 "" 70 "" 71 "" 72 "" 73 "" 74 "" 75 "" 76 "" 77 "" 78 "" 79 "" 80 "" 81 "" 82 "" 83 "" 84 "" 85 "" 86 "" 87 "" 88 "" 89 "" 90 "" 91 "" 92 "" 93 "" 94 "" 95 "" 96 "" 97 "" 98 "" 99 "" 100 "" 101 "" 102 "" 103 "" 104 "" 105 "" 106 "" 107 "" 108 "" 109 "" 110 "" 111 "" 112 "" 113 "" 114 "" 115 "" 116 "" 117 "" 118 "" 119 "" 120 "" 121 "" 122 "" 123 "" 124 "" 125 "" 126 "" 127 "" 128 "" 129 "" 130 "" 131 "" 132 "" 133 "" 134 "" 135 "" 136 "" 137 "" 138 "" 139 "" 140 "" 141 "" 142 "" 143 "" 144 "" 145 "" 146 "" 147 "" 148 "" 149 "" 150 "" 151 "" 152 "" 153 "" 154 "" 155 "" 156 "" 157 "" 158 "" 159 "" 160 "" 161 "" 162 "" 163 "" 164 "" 165 "" 166 "" 167 "" 168 "" 169 "" 170 "" 171 "" 172 "" 173 "" 174 "" 175 "" 176 "" 177 "" 178 "" 179 "" 180 "" 181 "" 182 "" 183 "" 184 "" 185 "" 186 "" 187 "" 188 "" 189 "" 190 "" 191 "" 192 "" 193 "" 194 "" 195 "" 196 "" 197 "" 198 "" 199 "" 200 "" 201 "" 202 "" 203 "" 204 "" 205 "" 206 "" 207 "" 208 "" 209 "" 210 "" 211 "" 212 "" 213 "" 214 "" 215 "" 216 "" 217 "" 218 "" 219 "" 220 "" 221 "" 222 "" 223 "" 224 "" 225 "" 226 "" 227 "" 228 "" 229 "" 230 "" 231 "" 232 "" 233 "" 234 "" 235 "" 236 "" 237 "" 238 "" 239 "" 240 "" 241 "" 242 "" 243 "" 244 "" 245 "" 246 "" 247 "" 248 "" 249 "" 250 "" 251 "" 252 "" 253 "" 254 "" 255 "";
+VAL_ 457 EPB_StasticReq 0 "No Request" 1 "Apply Request" 2 "Release request" 3 "reserve";
+VAL_ 457 EPB_DynBrakAppReq 0 "No request" 1 "Request";
+VAL_ 457 EPB_DynDecReqVal 0 "" 1 "" 2 "" 3 "" 4 "" 5 "" 6 "" 7 "" 8 "" 9 "" 10 "" 11 "" 12 "" 13 "" 14 "" 15 "";
+VAL_ 457 APFunctionAlive 0 "normal" 1 "failure";
+VAL_ 457 APFunctionAct 0 "off" 1 "active";
+VAL_ 457 AP_CDDReqVal 0 "" 1 "" 2 "" 3 "" 4 "" 5 "" 6 "" 7 "" 8 "" 9 "" 10 "" 11 "" 12 "" 13 "" 14 "" 15 "";
+VAL_ 457 AP_CDDReq 0 "No Request" 1 "Request";
+VAL_ 457 AP_DriveOff 0 "No Request" 1 "Request";
+VAL_ 457 AP_StandstillReq 0 "No Request" 1 "Request";
+VAL_ 457 AP_BrakeMode 0 "Idle(No braking)" 1 "Comfortable" 2 "Emergency" 3 "Reserve";
+VAL_ 457 MSG_CNT 0 "" 1 "" 2 "" 3 "" 4 "" 5 "" 6 "" 7 "" 8 "" 9 "" 10 "" 11 "" 12 "" 13 "" 14 "" 15 "";
+VAL_ 457 CHKSUM 0 "" 1 "" 2 "" 3 "" 4 "" 5 "" 6 "" 7 "" 8 "" 9 "" 10 "" 11 "" 12 "" 13 "" 14 "" 15 "" 16 "" 17 "" 18 "" 19 "" 20 "" 21 "" 22 "" 23 "" 24 "" 25 "" 26 "" 27 "" 28 "" 29 "" 30 "" 31 "" 32 "" 33 "" 34 "" 35 "" 36 "" 37 "" 38 "" 39 "" 40 "" 41 "" 42 "" 43 "" 44 "" 45 "" 46 "" 47 "" 48 "" 49 "" 50 "" 51 "" 52 "" 53 "" 54 "" 55 "" 56 "" 57 "" 58 "" 59 "" 60 "" 61 "" 62 "" 63 "" 64 "" 65 "" 66 "" 67 "" 68 "" 69 "" 70 "" 71 "" 72 "" 73 "" 74 "" 75 "" 76 "" 77 "" 78 "" 79 "" 80 "" 81 "" 82 "" 83 "" 84 "" 85 "" 86 "" 87 "" 88 "" 89 "" 90 "" 91 "" 92 "" 93 "" 94 "" 95 "" 96 "" 97 "" 98 "" 99 "" 100 "" 101 "" 102 "" 103 "" 104 "" 105 "" 106 "" 107 "" 108 "" 109 "" 110 "" 111 "" 112 "" 113 "" 114 "" 115 "" 116 "" 117 "" 118 "" 119 "" 120 "" 121 "" 122 "" 123 "" 124 "" 125 "" 126 "" 127 "" 128 "" 129 "" 130 "" 131 "" 132 "" 133 "" 134 "" 135 "" 136 "" 137 "" 138 "" 139 "" 140 "" 141 "" 142 "" 143 "" 144 "" 145 "" 146 "" 147 "" 148 "" 149 "" 150 "" 151 "" 152 "" 153 "" 154 "" 155 "" 156 "" 157 "" 158 "" 159 "" 160 "" 161 "" 162 "" 163 "" 164 "" 165 "" 166 "" 167 "" 168 "" 169 "" 170 "" 171 "" 172 "" 173 "" 174 "" 175 "" 176 "" 177 "" 178 "" 179 "" 180 "" 181 "" 182 "" 183 "" 184 "" 185 "" 186 "" 187 "" 188 "" 189 "" 190 "" 191 "" 192 "" 193 "" 194 "" 195 "" 196 "" 197 "" 198 "" 199 "" 200 "" 201 "" 202 "" 203 "" 204 "" 205 "" 206 "" 207 "" 208 "" 209 "" 210 "" 211 "" 212 "" 213 "" 214 "" 215 "" 216 "" 217 "" 218 "" 219 "" 220 "" 221 "" 222 "" 223 "" 224 "" 225 "" 226 "" 227 "" 228 "" 229 "" 230 "" 231 "" 232 "" 233 "" 234 "" 235 "" 236 "" 237 "" 238 "" 239 "" 240 "" 241 "" 242 "" 243 "" 244 "" 245 "" 246 "" 247 "" 248 "" 249 "" 250 "" 251 "" 252 "" 253 "" 254 "" 255 "";
+VAL_ 691 ADCU_DriAngleRequestCtrl 0 "No request" 1 "Request";
+VAL_ 691 ADCU_DriAngleRequest 0 "" 1 "" 2 "" 3 "" 4 "" 5 "" 6 "" 7 "" 8 "" 9 "" 10 "" 11 "" 12 "" 13 "" 14 "" 15 "" 16 "" 17 "" 18 "" 19 "" 20 "" 21 "" 22 "" 23 "" 24 "" 25 "" 26 "" 27 "" 28 "" 29 "" 30 "" 31 "" 32 "" 33 "" 34 "" 35 "" 36 "" 37 "" 38 "" 39 "" 40 "" 41 "" 42 "" 43 "" 44 "" 45 "" 46 "" 47 "" 48 "" 49 "" 50 "" 51 "" 52 "" 53 "" 54 "" 55 "" 56 "" 57 "" 58 "" 59 "" 60 "" 61 "" 62 "" 63 "" 64 "" 65 "" 66 "" 67 "" 68 "" 69 "" 70 "" 71 "" 72 "" 73 "" 74 "" 75 "" 76 "" 77 "" 78 "" 79 "" 80 "" 81 "" 82 "" 83 "" 84 "" 85 "" 86 "" 87 "" 88 "" 89 "" 90 "" 91 "" 92 "" 93 "" 94 "" 95 "" 96 "" 97 "" 98 "" 99 "" 100 "" 101 "" 102 "" 103 "" 104 "" 105 "" 106 "" 107 "" 108 "" 109 "" 110 "" 111 "" 112 "" 113 "" 114 "" 115 "" 116 "" 117 "" 118 "" 119 "" 120 "" 121 "" 122 "" 123 "" 124 "" 125 "" 126 "" 127 "" 128 "" 129 "" 130 "" 131 "" 132 "" 133 "" 134 "" 135 "" 136 "" 137 "" 138 "" 139 "" 140 "" 141 "" 142 "" 143 "" 144 "" 145 "" 146 "" 147 "" 148 "" 149 "" 150 "" 151 "" 152 "" 153 "" 154 "" 155 "" 156 "" 157 "" 158 "" 159 "" 160 "" 161 "" 162 "" 163 "" 164 "" 165 "" 166 "" 167 "" 168 "" 169 "" 170 "" 171 "" 172 "" 173 "" 174 "" 175 "" 176 "" 177 "" 178 "" 179 "" 180 "" 181 "" 182 "" 183 "" 184 "" 185 "" 186 "" 187 "" 188 "" 189 "" 190 "" 191 "" 192 "" 193 "" 194 "" 195 "" 196 "" 197 "" 198 "" 199 "" 200 "" 201 "" 202 "" 203 "" 204 "" 205 "" 206 "" 207 "" 208 "" 209 "" 210 "" 211 "" 212 "" 213 "" 214 "" 215 "" 216 "" 217 "" 218 "" 219 "" 220 "" 221 "" 222 "" 223 "" 224 "" 225 "" 226 "" 227 "" 228 "" 229 "" 230 "" 231 "" 232 "" 233 "" 234 "" 235 "" 236 "" 237 "" 238 "" 239 "" 240 "" 241 "" 242 "" 243 "" 244 "" 245 "" 246 "" 247 "" 248 "" 249 "" 250 "" 251 "" 252 "" 253 "" 254 "" 255 "";
+VAL_ 691 ADCU_DriAngleRequest_Vld 0 "Valid" 1 "Invalid";
+VAL_ 691 ADCU_ControlMode 0 "No request" 1 "LKA active" 2 "APA active" 3 "Reserve";
+VAL_ 691 STIFFNESS_Req 0 "" 1 "" 2 "" 3 "" 4 "" 5 "" 6 "" 7 "" 8 "" 9 "" 10 "" 11 "" 12 "" 13 "" 14 "" 15 "" 16 "" 17 "" 18 "" 19 "" 20 "" 21 "" 22 "" 23 "" 24 "" 25 "" 26 "" 27 "" 28 "" 29 "" 30 "" 31 "" 32 "" 33 "" 34 "" 35 "" 36 "" 37 "" 38 "" 39 "" 40 "" 41 "" 42 "" 43 "" 44 "" 45 "" 46 "" 47 "" 48 "" 49 "" 50 "" 51 "" 52 "" 53 "" 54 "" 55 "" 56 "" 57 "" 58 "" 59 "" 60 "" 61 "" 62 "" 63 "" 64 "" 65 "" 66 "" 67 "" 68 "" 69 "" 70 "" 71 "" 72 "" 73 "" 74 "" 75 "" 76 "" 77 "" 78 "" 79 "" 80 "" 81 "" 82 "" 83 "" 84 "" 85 "" 86 "" 87 "" 88 "" 89 "" 90 "" 91 "" 92 "" 93 "" 94 "" 95 "" 96 "" 97 "" 98 "" 99 "" 100 "" 101 "" 102 "" 103 "" 104 "" 105 "" 106 "" 107 "" 108 "" 109 "" 110 "" 111 "" 112 "" 113 "" 114 "" 115 "" 116 "" 117 "" 118 "" 119 "" 120 "" 121 "" 122 "" 123 "" 124 "" 125 "" 126 "" 127 "" 128 "" 129 "" 130 "" 131 "" 132 "" 133 "" 134 "" 135 "" 136 "" 137 "" 138 "" 139 "" 140 "" 141 "" 142 "" 143 "" 144 "" 145 "" 146 "" 147 "" 148 "" 149 "" 150 "" 151 "" 152 "" 153 "" 154 "" 155 "" 156 "" 157 "" 158 "" 159 "" 160 "" 161 "" 162 "" 163 "" 164 "" 165 "" 166 "" 167 "" 168 "" 169 "" 170 "" 171 "" 172 "" 173 "" 174 "" 175 "" 176 "" 177 "" 178 "" 179 "" 180 "" 181 "" 182 "" 183 "" 184 "" 185 "" 186 "" 187 "" 188 "" 189 "" 190 "" 191 "" 192 "" 193 "" 194 "" 195 "" 196 "" 197 "" 198 "" 199 "" 200 "" 201 "" 202 "" 203 "" 204 "" 205 "" 206 "" 207 "" 208 "" 209 "" 210 "" 211 "" 212 "" 213 "" 214 "" 215 "" 216 "" 217 "" 218 "" 219 "" 220 "" 221 "" 222 "" 223 "" 224 "" 225 "" 226 "" 227 "" 228 "" 229 "" 230 "" 231 "" 232 "" 233 "" 234 "" 235 "" 236 "" 237 "" 238 "" 239 "" 240 "" 241 "" 242 "" 243 "" 244 "" 245 "" 246 "" 247 "" 248 "" 249 "" 250 "" 251 "" 252 "" 253 "" 254 "" 255 "";
+VAL_ 691 ADCU_DeratingLevelRequest 0 "" 1 "" 2 "" 3 "" 4 "" 5 "" 6 "" 7 "" 8 "" 9 "" 10 "" 11 "" 12 "" 13 "" 14 "" 15 "" 16 "" 17 "" 18 "" 19 "" 20 "" 21 "" 22 "" 23 "" 24 "" 25 "" 26 "" 27 "" 28 "" 29 "" 30 "" 31 "" 32 "" 33 "" 34 "" 35 "" 36 "" 37 "" 38 "" 39 "" 40 "" 41 "" 42 "" 43 "" 44 "" 45 "" 46 "" 47 "" 48 "" 49 "" 50 "" 51 "" 52 "" 53 "" 54 "" 55 "" 56 "" 57 "" 58 "" 59 "" 60 "" 61 "" 62 "" 63 "" 64 "" 65 "" 66 "" 67 "" 68 "" 69 "" 70 "" 71 "" 72 "" 73 "" 74 "" 75 "" 76 "" 77 "" 78 "" 79 "" 80 "" 81 "" 82 "" 83 "" 84 "" 85 "" 86 "" 87 "" 88 "" 89 "" 90 "" 91 "" 92 "" 93 "" 94 "" 95 "" 96 "" 97 "" 98 "" 99 "" 100 "" 101 "" 102 "" 103 "" 104 "" 105 "" 106 "" 107 "" 108 "" 109 "" 110 "" 111 "" 112 "" 113 "" 114 "" 115 "" 116 "" 117 "" 118 "" 119 "" 120 "" 121 "" 122 "" 123 "" 124 "" 125 "" 126 "" 127 "" 128 "" 129 "" 130 "" 131 "" 132 "" 133 "" 134 "" 135 "" 136 "" 137 "" 138 "" 139 "" 140 "" 141 "" 142 "" 143 "" 144 "" 145 "" 146 "" 147 "" 148 "" 149 "" 150 "" 151 "" 152 "" 153 "" 154 "" 155 "" 156 "" 157 "" 158 "" 159 "" 160 "" 161 "" 162 "" 163 "" 164 "" 165 "" 166 "" 167 "" 168 "" 169 "" 170 "" 171 "" 172 "" 173 "" 174 "" 175 "" 176 "" 177 "" 178 "" 179 "" 180 "" 181 "" 182 "" 183 "" 184 "" 185 "" 186 "" 187 "" 188 "" 189 "" 190 "" 191 "" 192 "" 193 "" 194 "" 195 "" 196 "" 197 "" 198 "" 199 "" 200 "" 201 "" 202 "" 203 "" 204 "" 205 "" 206 "" 207 "" 208 "" 209 "" 210 "" 211 "" 212 "" 213 "" 214 "" 215 "" 216 "" 217 "" 218 "" 219 "" 220 "" 221 "" 222 "" 223 "" 224 "" 225 "" 226 "" 227 "" 228 "" 229 "" 230 "" 231 "" 232 "" 233 "" 234 "" 235 "" 236 "" 237 "" 238 "" 239 "" 240 "" 241 "" 242 "" 243 "" 244 "" 245 "" 246 "" 247 "" 248 "" 249 "" 250 "" 251 "" 252 "" 253 "" 254 "" 255 "";
+VAL_ 691 ADCU_HapcWarnReq 0 "Normal" 1 "Warning" 2 "Reserved";
+VAL_ 691 ADCU_ESS_Mode 0 "Reserve" 1 "ESS active" 2 "No request" 3 "Reserve";
+VAL_ 691 ADCU_MsgRC 0 "" 1 "" 2 "" 3 "" 4 "" 5 "" 6 "" 7 "" 8 "" 9 "" 10 "" 11 "" 12 "" 13 "" 14 "" 15 "";
+VAL_ 691 ADCU_MsgChecksum 0 "" 1 "" 2 "" 3 "" 4 "" 5 "" 6 "" 7 "" 8 "" 9 "" 10 "" 11 "" 12 "" 13 "" 14 "" 15 "" 16 "" 17 "" 18 "" 19 "" 20 "" 21 "" 22 "" 23 "" 24 "" 25 "" 26 "" 27 "" 28 "" 29 "" 30 "" 31 "" 32 "" 33 "" 34 "" 35 "" 36 "" 37 "" 38 "" 39 "" 40 "" 41 "" 42 "" 43 "" 44 "" 45 "" 46 "" 47 "" 48 "" 49 "" 50 "" 51 "" 52 "" 53 "" 54 "" 55 "" 56 "" 57 "" 58 "" 59 "" 60 "" 61 "" 62 "" 63 "" 64 "" 65 "" 66 "" 67 "" 68 "" 69 "" 70 "" 71 "" 72 "" 73 "" 74 "" 75 "" 76 "" 77 "" 78 "" 79 "" 80 "" 81 "" 82 "" 83 "" 84 "" 85 "" 86 "" 87 "" 88 "" 89 "" 90 "" 91 "" 92 "" 93 "" 94 "" 95 "" 96 "" 97 "" 98 "" 99 "" 100 "" 101 "" 102 "" 103 "" 104 "" 105 "" 106 "" 107 "" 108 "" 109 "" 110 "" 111 "" 112 "" 113 "" 114 "" 115 "" 116 "" 117 "" 118 "" 119 "" 120 "" 121 "" 122 "" 123 "" 124 "" 125 "" 126 "" 127 "" 128 "" 129 "" 130 "" 131 "" 132 "" 133 "" 134 "" 135 "" 136 "" 137 "" 138 "" 139 "" 140 "" 141 "" 142 "" 143 "" 144 "" 145 "" 146 "" 147 "" 148 "" 149 "" 150 "" 151 "" 152 "" 153 "" 154 "" 155 "" 156 "" 157 "" 158 "" 159 "" 160 "" 161 "" 162 "" 163 "" 164 "" 165 "" 166 "" 167 "" 168 "" 169 "" 170 "" 171 "" 172 "" 173 "" 174 "" 175 "" 176 "" 177 "" 178 "" 179 "" 180 "" 181 "" 182 "" 183 "" 184 "" 185 "" 186 "" 187 "" 188 "" 189 "" 190 "" 191 "" 192 "" 193 "" 194 "" 195 "" 196 "" 197 "" 198 "" 199 "" 200 "" 201 "" 202 "" 203 "" 204 "" 205 "" 206 "" 207 "" 208 "" 209 "" 210 "" 211 "" 212 "" 213 "" 214 "" 215 "" 216 "" 217 "" 218 "" 219 "" 220 "" 221 "" 222 "" 223 "" 224 "" 225 "" 226 "" 227 "" 228 "" 229 "" 230 "" 231 "" 232 "" 233 "" 234 "" 235 "" 236 "" 237 "" 238 "" 239 "" 240 "" 241 "" 242 "" 243 "" 244 "" 245 "" 246 "" 247 "" 248 "" 249 "" 250 "" 251 "" 252 "" 253 "" 254 "" 255 "";
+VAL_ 387 V_APO 0 "" 1 "" 2 "" 3 "" 4 "" 5 "" 6 "" 7 "" 8 "" 9 "" 10 "" 11 "" 12 "" 13 "" 14 "" 15 "" 16 "" 17 "" 18 "" 19 "" 20 "" 21 "" 22 "" 23 "" 24 "" 25 "" 26 "" 27 "" 28 "" 29 "" 30 "" 31 "" 32 "" 33 "" 34 "" 35 "" 36 "" 37 "" 38 "" 39 "" 40 "" 41 "" 42 "" 43 "" 44 "" 45 "" 46 "" 47 "" 48 "" 49 "" 50 "" 51 "" 52 "" 53 "" 54 "" 55 "" 56 "" 57 "" 58 "" 59 "" 60 "" 61 "" 62 "" 63 "" 64 "" 65 "" 66 "" 67 "" 68 "" 69 "" 70 "" 71 "" 72 "" 73 "" 74 "" 75 "" 76 "" 77 "" 78 "" 79 "" 80 "" 81 "" 82 "" 83 "" 84 "" 85 "" 86 "" 87 "" 88 "" 89 "" 90 "" 91 "" 92 "" 93 "" 94 "" 95 "" 96 "" 97 "" 98 "" 99 "" 100 "" 101 "" 102 "" 103 "" 104 "" 105 "" 106 "" 107 "" 108 "" 109 "" 110 "" 111 "" 112 "" 113 "" 114 "" 115 "" 116 "" 117 "" 118 "" 119 "" 120 "" 121 "" 122 "" 123 "" 124 "" 125 "" 126 "" 127 "" 128 "" 129 "" 130 "" 131 "" 132 "" 133 "" 134 "" 135 "" 136 "" 137 "" 138 "" 139 "" 140 "" 141 "" 142 "" 143 "" 144 "" 145 "" 146 "" 147 "" 148 "" 149 "" 150 "" 151 "" 152 "" 153 "" 154 "" 155 "" 156 "" 157 "" 158 "" 159 "" 160 "" 161 "" 162 "" 163 "" 164 "" 165 "" 166 "" 167 "" 168 "" 169 "" 170 "" 171 "" 172 "" 173 "" 174 "" 175 "" 176 "" 177 "" 178 "" 179 "" 180 "" 181 "" 182 "" 183 "" 184 "" 185 "" 186 "" 187 "" 188 "" 189 "" 190 "" 191 "" 192 "" 193 "" 194 "" 195 "" 196 "" 197 "" 198 "" 199 "" 200 "" 201 "" 202 "" 203 "" 204 "" 205 "" 206 "" 207 "" 208 "" 209 "" 210 "" 211 "" 212 "" 213 "" 214 "" 215 "" 216 "" 217 "" 218 "" 219 "" 220 "" 221 "" 222 "" 223 "" 224 "" 225 "" 226 "" 227 "" 228 "" 229 "" 230 "" 231 "" 232 "" 233 "" 234 "" 235 "" 236 "" 237 "" 238 "" 239 "" 240 "" 241 "" 242 "" 243 "" 244 "" 245 "" 246 "" 247 "" 248 "" 249 "" 250 "" 251 "" 252 "" 253 "" 254 "" 255 "";
+VAL_ 384 ETCFAIL 0 "normal" 1 "Not used" 2 "Not used" 3 "torque request can't be achieved" 4 "Not used" 5 "Not used" 6 "Not used" 7 "Not used";
+VAL_ 384 P_RUN 0 "" 1 "" 2 "" 3 "" 4 "" 5 "" 6 "" 7 "" 8 "" 9 "" 10 "" 11 "" 12 "" 13 "" 14 "" 15 "";
+VAL_ 1361 ENG_STA 0 "engine stopped" 1 "engine stalled" 2 "engine running（EV vehicle ready）" 3 "engine cranking";
+VAL_ 458 ADCU_ShifterReq 0 "No request" 1 "Request";
+VAL_ 458 ADCU_ShifterPosReq 0 "H(default)" 1 "P" 2 "R" 3 "N" 4 "D" 5 "Reserved" 6 "Reserved" 7 "Reserved" 8 "Reserved" 9 "Reserved" 10 "Reserved" 11 "Reserved" 12 "Reserved" 13 "Reserved" 14 "Reserved";
+VAL_ 458 MessageCounter 0 "" 1 "" 2 "" 3 "" 4 "" 5 "" 6 "" 7 "" 8 "" 9 "" 10 "" 11 "" 12 "" 13 "" 14 "" 15 "";
+VAL_ 458 Checksum 0 "" 1 "" 2 "" 3 "" 4 "" 5 "" 6 "" 7 "" 8 "" 9 "" 10 "" 11 "" 12 "" 13 "" 14 "" 15 "" 16 "" 17 "" 18 "" 19 "" 20 "" 21 "" 22 "" 23 "" 24 "" 25 "" 26 "" 27 "" 28 "" 29 "" 30 "" 31 "" 32 "" 33 "" 34 "" 35 "" 36 "" 37 "" 38 "" 39 "" 40 "" 41 "" 42 "" 43 "" 44 "" 45 "" 46 "" 47 "" 48 "" 49 "" 50 "" 51 "" 52 "" 53 "" 54 "" 55 "" 56 "" 57 "" 58 "" 59 "" 60 "" 61 "" 62 "" 63 "" 64 "" 65 "" 66 "" 67 "" 68 "" 69 "" 70 "" 71 "" 72 "" 73 "" 74 "" 75 "" 76 "" 77 "" 78 "" 79 "" 80 "" 81 "" 82 "" 83 "" 84 "" 85 "" 86 "" 87 "" 88 "" 89 "" 90 "" 91 "" 92 "" 93 "" 94 "" 95 "" 96 "" 97 "" 98 "" 99 "" 100 "" 101 "" 102 "" 103 "" 104 "" 105 "" 106 "" 107 "" 108 "" 109 "" 110 "" 111 "" 112 "" 113 "" 114 "" 115 "" 116 "" 117 "" 118 "" 119 "" 120 "" 121 "" 122 "" 123 "" 124 "" 125 "" 126 "" 127 "" 128 "" 129 "" 130 "" 131 "" 132 "" 133 "" 134 "" 135 "" 136 "" 137 "" 138 "" 139 "" 140 "" 141 "" 142 "" 143 "" 144 "" 145 "" 146 "" 147 "" 148 "" 149 "" 150 "" 151 "" 152 "" 153 "" 154 "" 155 "" 156 "" 157 "" 158 "" 159 "" 160 "" 161 "" 162 "" 163 "" 164 "" 165 "" 166 "" 167 "" 168 "" 169 "" 170 "" 171 "" 172 "" 173 "" 174 "" 175 "" 176 "" 177 "" 178 "" 179 "" 180 "" 181 "" 182 "" 183 "" 184 "" 185 "" 186 "" 187 "" 188 "" 189 "" 190 "" 191 "" 192 "" 193 "" 194 "" 195 "" 196 "" 197 "" 198 "" 199 "" 200 "" 201 "" 202 "" 203 "" 204 "" 205 "" 206 "" 207 "" 208 "" 209 "" 210 "" 211 "" 212 "" 213 "" 214 "" 215 "" 216 "" 217 "" 218 "" 219 "" 220 "" 221 "" 222 "" 223 "" 224 "" 225 "" 226 "" 227 "" 228 "" 229 "" 230 "" 231 "" 232 "" 233 "" 234 "" 235 "" 236 "" 237 "" 238 "" 239 "" 240 "" 241 "" 242 "" 243 "" 244 "" 245 "" 246 "" 247 "" 248 "" 249 "" 250 "" 251 "" 252 "" 253 "" 254 "" 255 "";
+VAL_ 1255 MCO_TYPE_L1 0 "默认" 1 "减速带特征" 2 "井盖特征" 3 "非标准特征" 4 "预留" 5 "预留" 7 "无效";
+VAL_ 1255 MCO_LEVEL_L1 0 "default" 1 "-10cm以下" 2 "-10~-7.5cm" 3 "-7.5~-5cm" 4 "-5~-2.5cm" 5 "-2.5~2.5cm" 6 "2.5~5cm" 7 "5~7.5cm" 8 "7.5~10cm" 9 "10cm以上" 10 "reserved" 11 "reserved" 12 "reserved" 13 "reserved" 15 "invalid";
+VAL_ 1255 MCO_TYPE_L2 0 "默认" 1 "减速带特征" 2 "井盖特征" 3 "非标准特征" 4 "预留" 5 "预留" 7 "无效";
+VAL_ 1255 MCO_LEVEL_L2 0 "default" 1 "-10cm以下" 2 "-10~-7.5cm" 3 "-7.5~-5cm" 4 "-5~-2.5cm" 5 "-2.5~2.5cm" 6 "2.5~5cm" 7 "5~7.5cm" 8 "7.5~10cm" 9 "10cm以上" 10 "reserved" 11 "reserved" 12 "reserved" 13 "reserved" 15 "invalid";
+VAL_ 1255 MCO_TYPE_L3 0 "默认" 1 "减速带特征" 2 "井盖特征" 3 "非标准特征" 4 "预留" 5 "预留" 7 "无效";
+VAL_ 1255 MCO_LEVEL_L3 0 "default" 1 "-10cm以下" 2 "-10~-7.5cm" 3 "-7.5~-5cm" 4 "-5~-2.5cm" 5 "-2.5~2.5cm" 6 "2.5~5cm" 7 "5~7.5cm" 8 "7.5~10cm" 9 "10cm以上" 10 "reserved" 11 "reserved" 12 "reserved" 13 "reserved" 15 "invalid";
+VAL_ 1256 MCO_TYPE_R1 0 "默认" 1 "减速带特征" 2 "井盖特征" 3 "非标准特征" 4 "预留" 5 "预留" 7 "无效";
+VAL_ 1256 MCO_LEVEL_R1 0 "default" 1 "-10cm以下" 2 "-10~-7.5cm" 3 "-7.5~-5cm" 4 "-5~-2.5cm" 5 "-2.5~2.5cm" 6 "2.5~5cm" 7 "5~7.5cm" 8 "7.5~10cm" 9 "10cm以上" 10 "reserved" 11 "reserved" 12 "reserved" 13 "reserved" 15 "invalid";
+VAL_ 1256 MCO_TYPE_R2 0 "默认" 1 "减速带特征" 2 "井盖特征" 3 "非标准特征" 4 "预留" 5 "预留" 7 "无效";
+VAL_ 1256 MCO_LEVEL_R2 0 "default" 1 "-10cm以下" 2 "-10~-7.5cm" 3 "-7.5~-5cm" 4 "-5~-2.5cm" 5 "-2.5~2.5cm" 6 "2.5~5cm" 7 "5~7.5cm" 8 "7.5~10cm" 9 "10cm以上" 10 "reserved" 11 "reserved" 12 "reserved" 13 "reserved" 15 "invalid";
+VAL_ 1256 MCO_TYPE_R3 0 "默认" 1 "减速带特征" 2 "井盖特征" 3 "非标准特征" 4 "预留" 5 "预留" 7 "无效";
+VAL_ 1256 MCO_LEVEL_R3 0 "default" 1 "-10cm以下" 2 "-10~-7.5cm" 3 "-7.5~-5cm" 4 "-5~-2.5cm" 5 "-2.5~2.5cm" 6 "2.5~5cm" 7 "5~7.5cm" 8 "7.5~10cm" 9 "10cm以上" 10 "reserved" 11 "reserved" 12 "reserved" 13 "reserved" 15 "invalid";
+VAL_ 1256 MC_FAULT_STS 0 "无故障" 1 "故障";
+VAL_ 1256 MC_WORK_STS 0 "无效" 1 "正常工作" 2 "抑制" 3 "预留";

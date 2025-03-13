@@ -1,0 +1,400 @@
+VERSION "2.0"
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: BMS ADCU VCM IBC
+
+
+BO_ 455 EAPMtoBrakeSystem: 6 ADCU
+ SG_ CHKSUM : 47|8@0+ (1,0) [0.0|255.0] ""  IBC,VCM
+ SG_ ADS_EAPM_acce_pedl_S : 39|2@0+ (1,0) [0.0|3.0] ""  VCM
+ SG_ MSG_CNT : 19|4@0+ (1,0) [0.0|15.0] ""  IBC,VCM
+ SG_ EAPM_SEA_status : 21|1@0+ (1,0) [0.0|1.0] ""  VCM
+ SG_ EAP_STS : 22|1@0+ (1,0) [0.0|1.0] ""  VCM
+
+BO_ 458 ADCU_VCM_01: 8 ADCU
+ SG_ Checksum : 63|8@0+ (1,0) [0.0|255.0] ""  IBC,VCM
+ SG_ MessageCounter : 51|4@0+ (1,0) [0.0|15.0] ""  IBC,VCM
+ SG_ ADCUHighest_TEMP : 47|8@0+ (1,-40.0) [-40.0|150.0] "C"  VCM
+ SG_ Liquidcooling_req_sig : 39|1@0+ (1,0) [0.0|1.0] ""  VCM
+ SG_ Liquidcooling_req_value : 31|8@0+ (1,0) [0.0|9.0] "L_min"  VCM
+ SG_ ADCU_ShifterPosReq : 19|4@0+ (1,0) [0.0|15.0] ""  IBC,VCM
+ SG_ ADCU_CtrlMode : 21|2@0+ (1,0) [0.0|3.0] ""  VCM
+ SG_ ADCU_TqReq : 22|1@0+ (1,0) [0.0|1.0] ""  VCM
+ SG_ ADCU_ShifterReq : 23|1@0+ (1,0) [0.0|1.0] ""  IBC,VCM
+ SG_ ADCU_Tq : 7|16@0- (1,0) [-32768.0|32767.0] "Nm"  VCM
+
+BO_ 469 VCM2RBS: 8 VCM
+ SG_ CHKSUM : 63|8@0+ (1,0) [0.0|255.0] ""  ADCU
+ SG_ MSGCNTR : 51|4@0+ (1,0) [0.0|15.0] ""  ADCU
+ SG_ MbRgnWhl : 23|16@0+ (1,-32768.0) [-32768.0|32766.0] "Nm"  ADCU
+
+BO_ 475 BMS_BAT_Status1: 8 BMS
+ SG_ BMS_BattSOC : 35|10@0+ (0.1,0) [0.0|100.0] "pct"  ADCU
+
+BO_ 500 VCM_ADCU_01: 8 VCM
+ SG_ Checksum : 63|8@0+ (1,0) [0.0|255.0] ""  ADCU
+ SG_ MessageCounter : 51|4@0+ (1,0) [0.0|15.0] ""  ADCU
+ SG_ PT_Req_Response : 53|1@0+ (1,0) [0.0|1.0] ""  ADCU
+ SG_ PT_CurrentMode : 55|2@0+ (1,0) [0.0|3.0] ""  ADCU
+ SG_ PT_Avl : 40|1@0+ (1,0) [0.0|1.0] ""  ADCU
+ SG_ PT_MotoSpdV : 41|1@0+ (1,0) [0.0|1.0] ""  ADCU
+ SG_ PT_MinAvlWhlTq : 39|14@0+ (2,0) [0.0|32765.0] "Nm"  ADCU
+ SG_ PT_MinAvlWhlTqV : 24|1@0+ (1,0) [0.0|1.0] ""  ADCU
+ SG_ PT_MaxAvlWhlTqV : 25|1@0+ (1,0) [0.0|1.0] ""  ADCU
+ SG_ PT_MaxAvlWhlTq : 23|14@0+ (2,0) [0.0|32765.0] "Nm"  ADCU
+ SG_ PT_MotoSpd : 7|16@0- (1,0) [-32768.0|32767.0] "rpm"  ADCU
+
+BO_ 502 VCM_ADCU_02: 8 VCM
+ SG_ Checksum : 63|8@0+ (1,0) [0.0|255.0] ""  ADCU
+ SG_ MessageCounter : 51|4@0+ (1,0) [0.0|15.0] ""  ADCU
+ SG_ PT_OverrideModeV : 35|1@0+ (1,0) [0.0|1.0] ""  ADCU
+ SG_ PT_OverrideMode : 36|1@0+ (1,0) [0.0|1.0] ""  ADCU
+ SG_ DRIN : 37|1@0+ (1,0) [0.0|1.0] ""  ADCU
+ SG_ GSM_Avl : 38|1@0+ (1,0) [0.0|1.0] ""  ADCU
+ SG_ PT_WhlTqActV : 39|1@0+ (1,0) [0.0|1.0] ""  ADCU
+ SG_ PT_WhlTqAct : 23|16@0- (1,0) [-32768.0|32767.0] "Nm"  ADCU
+ SG_ IND_RNG : 12|5@0+ (1,0) [0.0|31.0] ""  ADCU
+ SG_ PT_AccelPadelPosV : 13|1@0+ (1,0) [0.0|1.0] ""  ADCU
+ SG_ PT_AccelPadelPos : 7|10@0+ (0.1,0) [0.0|102.3] "pct"  ADCU
+
+BO_ 1226 AdptiveEnergyRecovery: 8 ADCU
+ SG_ ALIVE_CNT : 43|4@0+ (1,0) [0.0|15.0] ""  VCM
+ SG_ TARALIVE : 39|1@0+ (1,0) [0.0|1.0] ""  VCM
+ SG_ TimeAhead : 31|8@0+ (0.1,0) [0.0|25.5] "s"  VCM
+ SG_ TTC : 23|8@0+ (0.1,0) [0.0|25.5] "s"  VCM
+ SG_ DisToFrCar : 7|16@0+ (0.01,0) [0.0|655.35] "m"  VCM
+
+BO_ 1291 VCM_OBC: 8 VCM
+ SG_ CC_Connect_Sta : 55|3@0+ (1,0) [0.0|5.0] ""  ADCU
+
+BO_ 1558 TMCU_SenSor_Info2: 8 VCM
+ SG_ FAULT_TMMCU : 63|2@0+ (1,0) [0.0|1.0] ""  ADCU
+ SG_ MOTOROUT_TEMP_T2 : 23|8@0+ (1,-40.0) [-40.0|150.0] "C"  ADCU
+
+
+
+
+CM_ "Powered by lijiaqi-df@dfl.com.cn from DFN,
+Created time	 = 	2024-11-01 15:55:44,
+Excel Name	 = 	LK1A MAX CAN�źž���-20241030-V8.1-toMMT����-�����.xlsx,
+MD5 of Excel file	 = 	3aa458a674735eaf9ebc8aef861c6afd";
+CM_ BU_ BMS "";
+CM_ BU_ ADCU "";
+CM_ BU_ VCM "";
+CM_ BU_ IBC "";
+CM_ SG_ 455 CHKSUM "-";
+CM_ SG_ 455 ADS_EAPM_acce_pedl_S "VCM�յ����źŽ���������������-MMT";
+CM_ SG_ 455 MSG_CNT "-";
+CM_ SG_ 455 EAPM_SEA_status "-";
+CM_ SG_ 455 EAP_STS "EAPM���ܼ���ʱ���͸�VCM���������������źš�������Ŀ";
+CM_ SG_ 458 Checksum "-";
+CM_ SG_ 458 MessageCounter "-";
+CM_ SG_ 458 ADCUHighest_TEMP "ˮ��ϵͳ��������λ���϶�";
+CM_ SG_ 458 Liquidcooling_req_sig "ˮ��ϵͳ����";
+CM_ SG_ 458 Liquidcooling_req_value "ˮ��ϵͳ����";
+CM_ SG_ 458 ADCU_ShifterPosReq "-";
+CM_ SG_ 458 ADCU_CtrlMode "-";
+CM_ SG_ 458 ADCU_TqReq "-";
+CM_ SG_ 458 ADCU_ShifterReq "-";
+CM_ SG_ 458 ADCU_Tq "ADCU����Ť��";
+CM_ SG_ 469 CHKSUM "-";
+CM_ SG_ 469 MSGCNTR "-";
+CM_ SG_ 469 MbRgnWhl "VCMִ�е�ʵ�������ƶ�����-�ֶ�";
+CM_ SG_ 475 BMS_BattSOC "ʣ���������λ�ٷֱ�";
+CM_ SG_ 500 Checksum "-";
+CM_ SG_ 500 MessageCounter "-";
+CM_ SG_ 500 PT_Req_Response "Status of torque response to ADCU request";
+CM_ SG_ 500 PT_CurrentMode "VCM current control mode
+VCM��ǰ����ģʽ��
+0:����ADCU������
+1:�����г�������
+2:���ڲ���������";
+CM_ SG_ 500 PT_Avl "Available status of powertrain";
+CM_ SG_ 500 PT_MotoSpdV "Valid status of motor speed";
+CM_ SG_ 500 PT_MinAvlWhlTq "Minimum available powertrain torque";
+CM_ SG_ 500 PT_MinAvlWhlTqV "Valid status of minimum available powertrain torque";
+CM_ SG_ 500 PT_MaxAvlWhlTqV "Valid status of maximum available powertrain torque";
+CM_ SG_ 500 PT_MaxAvlWhlTq "Maximum available powertrain torque";
+CM_ SG_ 500 PT_MotoSpd "Motor speed";
+CM_ SG_ 502 Checksum "-";
+CM_ SG_ 502 MessageCounter "-";
+CM_ SG_ 502 PT_OverrideModeV "Valid status of override mode signal";
+CM_ SG_ 502 PT_OverrideMode "Status of overridemode
+��ǰ�ж����������ſ��ȼ����ʻ����Ť��>ADCU����Ť�أ��ж�ΪOverride";
+CM_ SG_ 502 DRIN "��ʻԱ�����������˱�־λ��0����ʻԱ�޻����˲���1����ʻԱ�л����˲���";
+CM_ SG_ 502 GSM_Avl "The gear system is available";
+CM_ SG_ 502 PT_WhlTqActV "Valid status of actual wheel torque";
+CM_ SG_ 502 PT_WhlTqAct "Actual wheel torque
+ADCU����Ť��VCM������Ӧ��VCM������Ӧ����Ť��";
+CM_ SG_ 502 IND_RNG "Final Gear";
+CM_ SG_ 502 PT_AccelPadelPosV "Valid status of accelerator pedal opening";
+CM_ SG_ 502 PT_AccelPadelPos "Accelerator pedal opening,��λ�ٷֱ�";
+CM_ SG_ 1226 ALIVE_CNT "(Alivecounter 0~15)";
+CM_ SG_ 1226 TARALIVE "Ŀ���Ƿ���ACC������Ŀ��& ACC Ŀ��ѡ���Ƿ��й���(TGUֻ��ѡ�в���valid״̬
+;����״̬��Ϊinvalid)";
+CM_ SG_ 1226 TimeAhead "Ŀ�공���Գ���ʱ��(�����߼�:������Ծ���/�Գ�����)";
+CM_ SG_ 1226 TTC "ACCĿ�공���Գ�������TTC(�����߼�:������Ծ���/��������ٶ�)";
+CM_ SG_ 1226 DisToFrCar "��ACC PO0���������(�ر����ѣ���Ȼ�ź���Ϊ������룬��VCM����ȷҪ����Ҫ�������,�״ﰴ����������������ź�)";
+CM_ SG_ 1291 CC_Connect_Sta "����FO����";
+CM_ SG_ 1558 FAULT_TMMCU "ˮ��ϵͳ����";
+CM_ SG_ 1558 MOTOROUT_TEMP_T2 "ˮ��ϵͳ��������λ���϶�";
+BA_DEF_ SG_  "GenSigStartValue" FLOAT -1.79769313486231e+308 1.84467440737096e+19;
+BA_DEF_ SG_  "GenSigSendType" ENUM  "Cyclic","OnWrite","OnWriteWithRepetition","OnChange","OnChangeWithRepetition","NotUsed_Sig5","NotUsed_Sig6","NoSigSendType";
+BA_DEF_ SG_  "GenSigTimeoutTime" INT 0 65535;
+BA_DEF_ SG_  "GenSigInactiveValue" INT 0 0;
+BA_DEF_ SG_  "GatewaySignal" STRING ;
+BA_DEF_ BO_  "GenMsgStartDelayTime" INT 0 300000;
+BA_DEF_ BO_  "GenMsgNrOfRepetition" INT 0 100000;
+BA_DEF_ BO_  "GenMsgDelayTime" INT 0 300000;
+BA_DEF_ BO_  "GenMsgCycleTimeFast" INT 0 300000;
+BA_DEF_ BO_  "GenMsgILSupport" ENUM  "No","Yes";
+BA_DEF_ BO_  "DiagFdOnly" ENUM  "No","Yes";
+BA_DEF_ BO_  "DiagConnection" HEX 0 65535;
+BA_DEF_ BO_  "DiagState" ENUM  "No","Yes";
+BA_DEF_ BO_  "DiagRequest" ENUM  "No","Yes";
+BA_DEF_ BO_  "DiagResponse" ENUM  "No","Yes";
+BA_DEF_ BO_  "NmAsrMessage" ENUM  "No","Yes";
+BA_DEF_ BU_  "NmAsrNodeIdentifier" INT 0 255;
+BA_DEF_ BU_  "NmAsrNode" ENUM  "No","Yes";
+BA_DEF_ BU_  "NmAsrCanMsgCycleOffset" INT 0 65535;
+BA_DEF_ BU_  "NmAsrCanMsgReducedTime" INT 1 65535;
+BA_DEF_ BU_  "NmAsrBaseAddress" HEX 0 536870911;
+BA_DEF_  "DBName" STRING ;
+BA_DEF_  "Baudrate" FLOAT 1000.0 1000000.0;
+BA_DEF_  "BaudRateCANFD" FLOAT 1000.0 10000000.0;
+BA_DEF_  "Manufacturer" STRING ;
+BA_DEF_  "NmType" STRING ;
+BA_DEF_  "NmAsrCanMsgCycleTime" INT 1 65535;
+BA_DEF_  "NmAsrMessageCount" INT 1 256;
+BA_DEF_  "NmAsrRepeatMessageTime" INT 1 65535;
+BA_DEF_  "NmAsrWaitBusSleepTime" INT 1 65535;
+BA_DEF_  "NmAsrTimeoutTime" INT 1 65535;
+BA_DEF_  "NBTMax" INT 8 25;
+BA_DEF_  "NBTMin" INT 6 25;
+BA_DEF_  "SyncJumpWidthMax" INT 1 4;
+BA_DEF_  "SyncJumpWidthMin" INT 1 4;
+BA_DEF_  "SamplePointMax" INT 50 100;
+BA_DEF_  "SamplePointMin" INT 50 100;
+BA_DEF_ BO_  "VFrameFormat" ENUM  "StandardCAN","ExtendedCAN","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","StandardCAN_FD","ExtendedCAN_FD";
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 0;
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "Cyclic","NotUsed_Msg1","NotUsed_Msg2","NotUsed_Msg3","NotUsed_Msg4","NotUsed_Msg5","NotUsed_Msg6","NotUsed_Msg7","NoMsgSendType";
+BA_DEF_  "BusType" STRING ;
+BA_DEF_DEF_  "GenSigStartValue" 0.0;
+BA_DEF_DEF_  "GenSigSendType" "Cyclic";
+BA_DEF_DEF_  "GenSigTimeoutTime" 0;
+BA_DEF_DEF_  "GenSigInactiveValue" 0;
+BA_DEF_DEF_  "GatewaySignal" "";
+BA_DEF_DEF_  "GenMsgStartDelayTime" 0;
+BA_DEF_DEF_  "GenMsgNrOfRepetition" 0;
+BA_DEF_DEF_  "GenMsgDelayTime" 0;
+BA_DEF_DEF_  "GenMsgCycleTimeFast" 0;
+BA_DEF_DEF_  "GenMsgILSupport" "Yes";
+BA_DEF_DEF_  "DiagFdOnly" "No";
+BA_DEF_DEF_  "DiagConnection" 0;
+BA_DEF_DEF_  "DiagState" "No";
+BA_DEF_DEF_  "DiagRequest" "No";
+BA_DEF_DEF_  "DiagResponse" "No";
+BA_DEF_DEF_  "NmAsrMessage" "No";
+BA_DEF_DEF_  "NmAsrNodeIdentifier" 0;
+BA_DEF_DEF_  "NmAsrNode" "No";
+BA_DEF_DEF_  "NmAsrCanMsgCycleOffset" 0;
+BA_DEF_DEF_  "NmAsrCanMsgReducedTime" 50;
+BA_DEF_DEF_  "NmAsrBaseAddress" 1280;
+BA_DEF_DEF_  "DBName" "";
+BA_DEF_DEF_  "Baudrate" 500000.0;
+BA_DEF_DEF_  "BaudRateCANFD" 2000000.0;
+BA_DEF_DEF_  "Manufacturer" "Vector";
+BA_DEF_DEF_  "NmType" "NmAsr";
+BA_DEF_DEF_  "NmAsrCanMsgCycleTime" 100;
+BA_DEF_DEF_  "NmAsrMessageCount" 64;
+BA_DEF_DEF_  "NmAsrRepeatMessageTime" 400;
+BA_DEF_DEF_  "NmAsrWaitBusSleepTime" 750;
+BA_DEF_DEF_  "NmAsrTimeoutTime" 1000;
+BA_DEF_DEF_  "NBTMax" 21;
+BA_DEF_DEF_  "NBTMin" 8;
+BA_DEF_DEF_  "SyncJumpWidthMax" 1;
+BA_DEF_DEF_  "SyncJumpWidthMin" 1;
+BA_DEF_DEF_  "SamplePointMax" 90;
+BA_DEF_DEF_  "SamplePointMin" 75;
+BA_DEF_DEF_  "VFrameFormat" "";
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "GenMsgSendType" "";
+BA_DEF_DEF_  "BusType" "CAN FD";
+BA_ "DBName" "PT-CAN";
+BA_ "BusType" "CAN";
+BA_ "Baudrate" 500000;
+BA_ "BaudRateCANFD" 0;
+BA_ "Manufacturer" "Vector";
+BA_ "GenMsgSendType" BO_ 455 0;
+BA_ "GenMsgCycleTime" BO_ 455 10;
+BA_ "VFrameFormat" BO_ 455 0;
+BA_ "GenSigSendType" SG_ 455 CHKSUM 0;
+BA_ "GenSigStartValue" SG_ 455 CHKSUM 0;
+BA_ "GenSigSendType" SG_ 455 ADS_EAPM_acce_pedl_S 0;
+BA_ "GenSigStartValue" SG_ 455 ADS_EAPM_acce_pedl_S 0;
+BA_ "GenSigSendType" SG_ 455 MSG_CNT 0;
+BA_ "GenSigStartValue" SG_ 455 MSG_CNT 0;
+BA_ "GenSigSendType" SG_ 455 EAPM_SEA_status 0;
+BA_ "GenSigStartValue" SG_ 455 EAPM_SEA_status 0;
+BA_ "GenSigSendType" SG_ 455 EAP_STS 0;
+BA_ "GenSigStartValue" SG_ 455 EAP_STS 0;
+BA_ "GenMsgSendType" BO_ 458 0;
+BA_ "GenMsgCycleTime" BO_ 458 20;
+BA_ "VFrameFormat" BO_ 458 0;
+BA_ "GenSigSendType" SG_ 458 Checksum 0;
+BA_ "GenSigStartValue" SG_ 458 Checksum 0;
+BA_ "GenSigSendType" SG_ 458 MessageCounter 0;
+BA_ "GenSigStartValue" SG_ 458 MessageCounter 0;
+BA_ "GenSigSendType" SG_ 458 ADCUHighest_TEMP 0;
+BA_ "GenSigStartValue" SG_ 458 ADCUHighest_TEMP 0;
+BA_ "GenSigSendType" SG_ 458 Liquidcooling_req_sig 0;
+BA_ "GenSigStartValue" SG_ 458 Liquidcooling_req_sig 0;
+BA_ "GenSigSendType" SG_ 458 Liquidcooling_req_value 0;
+BA_ "GenSigStartValue" SG_ 458 Liquidcooling_req_value 0;
+BA_ "GenSigSendType" SG_ 458 ADCU_ShifterPosReq 0;
+BA_ "GenSigStartValue" SG_ 458 ADCU_ShifterPosReq 0;
+BA_ "GenSigSendType" SG_ 458 ADCU_CtrlMode 0;
+BA_ "GenSigStartValue" SG_ 458 ADCU_CtrlMode 0;
+BA_ "GenSigSendType" SG_ 458 ADCU_TqReq 0;
+BA_ "GenSigStartValue" SG_ 458 ADCU_TqReq 0;
+BA_ "GenSigSendType" SG_ 458 ADCU_ShifterReq 0;
+BA_ "GenSigStartValue" SG_ 458 ADCU_ShifterReq 0;
+BA_ "GenSigSendType" SG_ 458 ADCU_Tq 0;
+BA_ "GenSigStartValue" SG_ 458 ADCU_Tq 0;
+BA_ "GenMsgSendType" BO_ 469 0;
+BA_ "GenMsgCycleTime" BO_ 469 10;
+BA_ "VFrameFormat" BO_ 469 0;
+BA_ "GenSigSendType" SG_ 469 CHKSUM 0;
+BA_ "GenSigSendType" SG_ 469 MSGCNTR 0;
+BA_ "GenSigSendType" SG_ 469 MbRgnWhl 0;
+BA_ "GenSigStartValue" SG_ 469 MbRgnWhl 0;
+BA_ "GenMsgSendType" BO_ 475 0;
+BA_ "GenMsgCycleTime" BO_ 475 10;
+BA_ "VFrameFormat" BO_ 475 0;
+BA_ "GenSigSendType" SG_ 475 BMS_BattSOC 0;
+BA_ "GenSigStartValue" SG_ 475 BMS_BattSOC 1023;
+BA_ "GenMsgSendType" BO_ 500 0;
+BA_ "GenMsgCycleTime" BO_ 500 10;
+BA_ "VFrameFormat" BO_ 500 0;
+BA_ "GenSigSendType" SG_ 500 Checksum 0;
+BA_ "GenSigSendType" SG_ 500 MessageCounter 0;
+BA_ "GenSigSendType" SG_ 500 PT_Req_Response 0;
+BA_ "GenSigStartValue" SG_ 500 PT_Req_Response 0;
+BA_ "GenSigSendType" SG_ 500 PT_CurrentMode 0;
+BA_ "GenSigSendType" SG_ 500 PT_Avl 0;
+BA_ "GenSigStartValue" SG_ 500 PT_Avl 0;
+BA_ "GenSigSendType" SG_ 500 PT_MotoSpdV 0;
+BA_ "GenSigSendType" SG_ 500 PT_MinAvlWhlTq 0;
+BA_ "GenSigStartValue" SG_ 500 PT_MinAvlWhlTq 0;
+BA_ "GenSigSendType" SG_ 500 PT_MinAvlWhlTqV 0;
+BA_ "GenSigSendType" SG_ 500 PT_MaxAvlWhlTqV 0;
+BA_ "GenSigSendType" SG_ 500 PT_MaxAvlWhlTq 0;
+BA_ "GenSigStartValue" SG_ 500 PT_MaxAvlWhlTq 0;
+BA_ "GenSigSendType" SG_ 500 PT_MotoSpd 0;
+BA_ "GenSigStartValue" SG_ 500 PT_MotoSpd 0;
+BA_ "GenMsgSendType" BO_ 502 0;
+BA_ "GenMsgCycleTime" BO_ 502 10;
+BA_ "VFrameFormat" BO_ 502 0;
+BA_ "GenSigSendType" SG_ 502 Checksum 0;
+BA_ "GenSigSendType" SG_ 502 MessageCounter 0;
+BA_ "GenSigSendType" SG_ 502 PT_OverrideModeV 0;
+BA_ "GenSigStartValue" SG_ 502 PT_OverrideModeV 0;
+BA_ "GenSigSendType" SG_ 502 PT_OverrideMode 0;
+BA_ "GenSigStartValue" SG_ 502 PT_OverrideMode 0;
+BA_ "GenSigSendType" SG_ 502 DRIN 0;
+BA_ "GenSigStartValue" SG_ 502 DRIN 0;
+BA_ "GenSigSendType" SG_ 502 GSM_Avl 0;
+BA_ "GenSigStartValue" SG_ 502 GSM_Avl 0;
+BA_ "GenSigSendType" SG_ 502 PT_WhlTqActV 0;
+BA_ "GenSigStartValue" SG_ 502 PT_WhlTqActV 0;
+BA_ "GenSigSendType" SG_ 502 PT_WhlTqAct 0;
+BA_ "GenSigSendType" SG_ 502 IND_RNG 0;
+BA_ "GenSigStartValue" SG_ 502 IND_RNG 0;
+BA_ "GenSigSendType" SG_ 502 PT_AccelPadelPosV 0;
+BA_ "GenSigStartValue" SG_ 502 PT_AccelPadelPosV 0;
+BA_ "GenSigSendType" SG_ 502 PT_AccelPadelPos 0;
+BA_ "GenMsgSendType" BO_ 1226 0;
+BA_ "GenMsgCycleTime" BO_ 1226 100;
+BA_ "VFrameFormat" BO_ 1226 0;
+BA_ "GenSigSendType" SG_ 1226 ALIVE_CNT 0;
+BA_ "GenSigStartValue" SG_ 1226 ALIVE_CNT 0;
+BA_ "GenSigSendType" SG_ 1226 TARALIVE 0;
+BA_ "GenSigStartValue" SG_ 1226 TARALIVE 0;
+BA_ "GenSigSendType" SG_ 1226 TimeAhead 0;
+BA_ "GenSigStartValue" SG_ 1226 TimeAhead 255;
+BA_ "GenSigSendType" SG_ 1226 TTC 0;
+BA_ "GenSigStartValue" SG_ 1226 TTC 255;
+BA_ "GenSigSendType" SG_ 1226 DisToFrCar 0;
+BA_ "GenSigStartValue" SG_ 1226 DisToFrCar 65535;
+BA_ "GenMsgSendType" BO_ 1291 0;
+BA_ "GenMsgCycleTime" BO_ 1291 100;
+BA_ "VFrameFormat" BO_ 1291 0;
+BA_ "GenSigSendType" SG_ 1291 CC_Connect_Sta 0;
+BA_ "GenSigStartValue" SG_ 1291 CC_Connect_Sta 0;
+BA_ "GenMsgSendType" BO_ 1558 0;
+BA_ "GenMsgCycleTime" BO_ 1558 100;
+BA_ "VFrameFormat" BO_ 1558 0;
+BA_ "GenSigSendType" SG_ 1558 FAULT_TMMCU 0;
+BA_ "GenSigStartValue" SG_ 1558 FAULT_TMMCU 0;
+BA_ "GenSigSendType" SG_ 1558 MOTOROUT_TEMP_T2 0;
+BA_ "GenSigStartValue" SG_ 1558 MOTOROUT_TEMP_T2 0;
+VAL_ 455 ADS_EAPM_acce_pedl_S 0 "No request" 1 "Completely" 2 "Partial" 3 "Reserved" ;
+VAL_ 455 EAPM_SEA_status 0 "no searching" 1 "FAP searching" ;
+VAL_ 455 EAP_STS 0 "EAPM no operation" 1 "EAPM operation" ;
+VAL_ 458 Liquidcooling_req_sig 0 "TMS is not required to respond to ADC cooling flow request" 1 "TMS is required to respond to ADC cooling flow request" ;
+VAL_ 458 Liquidcooling_req_value 0 "0 L/min" 1 "1 L/min" 2 "2 L/min" 3 "3 L/min" 4 "4 L/min" 5 "5 L/min" 6 "6 L/min" 7 "7 L/min" 8 "8 L/min" 9 "9 L/min" 10 "Reserved" 11 "Reserved" 12 "Reserved" 13 "Reserved" 14 "Reserved" 15 "Reserved" 16 "Reserved" 17 "Reserved" 18 "Reserved" 19 "Reserved" 20 "Reserved" 21 "Reserved" 22 "Reserved" 23 "Reserved" 24 "Reserved" 25 "Reserved" 26 "Reserved" 27 "Reserved" 28 "Reserved" 29 "Reserved" 30 "Reserved" 31 "Reserved" ;
+VAL_ 458 ADCU_ShifterPosReq 0 "H(default)" 1 "P" 2 "R" 3 "N" 4 "D" 5 "Reserved" 6 "Reserved" 7 "Reserved" 8 "Reserved" 9 "Reserved" 10 "Reserved" 11 "Reserved" 12 "Reserved" 13 "Reserved" 14 "Reserved" 15 "Reserved" ;
+VAL_ 458 ADCU_CtrlMode 0 "No request" 1 "Driving" 2 "Parking" 3 "Reserved" ;
+VAL_ 458 ADCU_TqReq 0 "No request" 1 "Request" ;
+VAL_ 458 ADCU_ShifterReq 0 "No request" 1 "Request" ;
+VAL_ 500 PT_Req_Response 0 "No response" 1 "Response" ;
+VAL_ 500 PT_CurrentMode 0 "Not in ADCU control" 1 "Driving" 2 "Parking" 3 "Reserved" ;
+VAL_ 500 PT_Avl 0 "Unavailable" 1 "Available" ;
+VAL_ 500 PT_MotoSpdV 0 "Invalid" 1 "Valid" ;
+VAL_ 500 PT_MinAvlWhlTqV 0 "Invalid" 1 "Valid" ;
+VAL_ 500 PT_MaxAvlWhlTqV 0 "Invalid" 1 "Valid" ;
+VAL_ 502 PT_OverrideModeV 0 "Invalid" 1 "Valid" ;
+VAL_ 502 PT_OverrideMode 0 "Not Override" 1 "Override" ;
+VAL_ 502 DRIN 0 "No intervention" 1 "Driver intervetion" ;
+VAL_ 502 GSM_Avl 0 "Unavailable" 1 "Available" ;
+VAL_ 502 PT_WhlTqActV 0 "Invalid" 1 "Valid" ;
+VAL_ 502 IND_RNG 0 "OFF" 1 "P range" 2 "R range" 3 "N range" 4 "D range" 5 "Reserved" 6 "Reserved" 7 "Reserved" 8 "Reserved" 9 "Reserved" 10 "Reserved" 11 "Reserved" 12 "Reserved" 13 "Reserved" 14 "Reserved" 15 "Reserved" 16 "Reserved" 17 "Reserved" 18 "Reserved" 19 "Reserved" 20 "Reserved" 21 "Reserved" 22 "Reserved" 23 "Reserved" 24 "Reserved" 25 "Reserved" 26 "Reserved" 27 "Reserved" 28 "Reserved" 29 "Reserved" 30 "Reserved" 31 "Reserved" ;
+VAL_ 502 PT_AccelPadelPosV 0 "Invalid" 1 "Valid" ;
+VAL_ 1226 TARALIVE 0 "invalid��" 1 "valid��" ;
+VAL_ 1291 CC_Connect_Sta 0 "δ����" 1 "�ŵ�ǹ��ȫ����" 2 "�ŵ�ǹ������" 3 "����ǹ��ȫ����" 4 "����ǹ������" 5 "���ӹ���" 6 "reserve" 7 "reserve" ;
+VAL_ 1558 FAULT_TMMCU 0 "�޹���" 1 "�й���" 2 "Reserved" 3 "Reserved" ;
+
+
+
